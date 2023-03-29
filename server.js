@@ -60,7 +60,7 @@ app.post("/quote", async (req, res) => {
   try {
     await transporter.sendMail({
       from: req.body.userEmail,
-      to: "heliosolarsystems@gmail.com",
+      to: `${process.env.GOOGLE_APP_EMAIL}`,
       subject: "Quote Request From Helion Site",
       text: `
       Project Address: ${req.body.userAddress}\n
