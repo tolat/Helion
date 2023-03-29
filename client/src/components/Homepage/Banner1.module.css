@@ -1,0 +1,40 @@
+.text {
+  margin: 8rem 3rem 0 3rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 2rem;
+}
+
+.nabcep {
+  height: 11rem;
+  margin: 4rem 3rem 0 3rem;
+}
+
+.container {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  text-align: right;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-width: var(--centralSpanWidth);
+  margin-bottom: 2rem;
+  transition: min-height 0.35s ease-in-out;
+  justify-content: space-between;
+}
+
+.upperContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.nabcepContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.expandButtonContainer {
+  width: 100%;
+}

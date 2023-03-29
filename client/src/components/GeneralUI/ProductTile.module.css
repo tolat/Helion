@@ -1,0 +1,41 @@
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  color: black;
+  width: 100%;
+  padding: 1rem 1.7rem 1rem 1.7rem;
+  background-color: white;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: transparent;
+}
+
+.image {
+  width: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.text {
+  line-height: 1.5rem;
+  padding: 0rem 1.7rem 1.7rem 1.7rem;
+  color: black;
+  text-align: left;
+  font-size: 0.99rem;
+  background-color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}

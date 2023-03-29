@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b059832c.css",
+    "main.js": "/static/js/main.aaae0f0f.js",
+    "static/js/787.4b0d58d8.chunk.js": "/static/js/787.4b0d58d8.chunk.js",
+    "static/media/solarspan1_medium.jpg": "/static/media/solarspan1_medium.e09e876bec9a2260c0c8.jpg",
+    "static/media/solarspan1_mobile.jpg": "/static/media/solarspan1_mobile.f7b4331b7969b29288fb.jpg",
+    "static/media/solar_background3.png": "/static/media/solar_background3.695672eeb1531742ff74.png",
+    "static/media/blackpanels1.jpeg": "/static/media/blackpanels1.0e017dc2466f30fd6b33.jpeg",
+    "static/media/netmetering_graphic.png": "/static/media/netmetering_graphic.ab4d14b9b1de9884b21d.png",
+    "static/media/solarspan4.jpg": "/static/media/solarspan4.d64e6304a2aa8103601f.jpg",
+    "static/media/solarspan5.jpeg": "/static/media/solarspan5.6b86cc528774be94c90e.jpeg",
+    "static/media/netmetering_graphic_vertical.jpg": "/static/media/netmetering_graphic_vertical.42b742ccd01cb708ce9f.jpg",
+    "static/media/greener_homes_graphic.png": "/static/media/greener_homes_graphic.936778e9ada5ec5512e3.png",
+    "static/media/pv_assoc_seal.png": "/static/media/pv_assoc_seal.35338c93bff7f6636822.png",
+    "static/media/microinverter_roof.jpeg": "/static/media/microinverter_roof.79d5f122f4eca0555eed.jpeg",
+    "static/media/Helio_logo2_nobg_light.png": "/static/media/Helio_logo2_nobg_light.a5d6607aa32ffa4b3caf.png",
+    "static/media/schneider_logo.png": "/static/media/schneider_logo.f5f65b76bd13bf13d815.png",
+    "static/media/strings_ground.jpeg": "/static/media/strings_ground.6f86ee8771c0a674ea5f.jpeg",
+    "static/media/cadsol_logo.png": "/static/media/cadsol_logo.27120aa33bf56fdb20d9.png",
+    "static/media/kinetic_logo.png": "/static/media/kinetic_logo.7f1d4e5383a7f719f147.png",
+    "static/media/strings_ground_mobile.jpg": "/static/media/strings_ground_mobile.58cedb85225db3439096.jpg",
+    "static/media/aps_logo.png": "/static/media/aps_logo.d3ee904976b53c11c141.png",
+    "static/media/longi_logo.png": "/static/media/longi_logo.85f8f774784ebd0cad8b.png",
+    "static/media/enphase_logo.png": "/static/media/enphase_logo.003fbf15d86954f4efe3.png",
+    "static/media/solaredge_logo.png": "/static/media/solaredge_logo.6ee6225f517fe893f807.png",
+    "index.html": "/index.html",
+    "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
+    "main.b059832c.css.map": "/static/css/main.b059832c.css.map",
+    "main.aaae0f0f.js.map": "/static/js/main.aaae0f0f.js.map",
+    "787.4b0d58d8.chunk.js.map": "/static/js/787.4b0d58d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b059832c.css",
+    "static/js/main.aaae0f0f.js"
+  ]
+}

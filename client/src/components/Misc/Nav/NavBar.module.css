@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--centralSpanWidth);
+  max-width: 100%;
+  height: var(--navBarHeight);
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.navbarLogo {
+  height: 100%;
+  margin-left: 2rem;
+  padding: 0.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-right: 3rem;
+}
+
+.backgroundDiv {
+  background-color: rgb(41, 41, 41);
+  opacity: 0;
+  height: var(--navBarHeight);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-bottom: 1px solid rgb(71, 71, 71);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.burgerButton {
+  display: unset;
+  position: fixed;
+  z-index: 12;
+  right: 1rem;
+  display: none;
+  align-items: center;
+}

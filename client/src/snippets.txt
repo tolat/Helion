@@ -1,0 +1,44 @@
+<CentralSection>
+  <div className={styles.centralHeader}>
+    We provide quality residential Solar PV and energy storage solutions for
+    both grid-tied and off-grid applications.
+  </div>
+  <div className={styles.centralHeader}>
+    <b>Helio Photovoltaic</b> is based primarily in the lower mainland, but can
+    also service Vancouver Island, the Okanagan, and the Cariboo/Chilcotin.
+  </div>
+</CentralSection>;
+
+
+ <ProductTile
+              style={{ width: PTWidth }}
+              header={"String Inverters"}
+              img={stringInvIcon}
+              text={
+                "String inverters convert all your DC solar energy to AC in one unit. Although they are the older inverter technology, string inverters have good reliability, excellent serviceability, and come with the most attractive pricetag. Ideal for to minimizing your solar payback period."
+              }
+            />
+            <ProductTile
+              style={{ width: PTWidth }}
+              header={"Microinverters"}
+              img={microInvIcon}
+              text={
+                "Miroinverters invert energy from DC to AC for each panel individually. This is the industry standard for the best inverter technology, providing excellent solar yield and shading compensation. Additionally, their longer standard lifespan results in greater return on investment."
+              }
+            />
+            <ProductTile
+              style={{ width: PTWidth }}
+              header={"Energy Storage"}
+              img={batteryIcon}
+              text={
+                "Tired of losing power during outages? A battery backup can help you have continuous power for some or all of your home loads when the grid is down. We offer Lithium storage options for residential, as well as Flooded Lead-Acid and Absorbed Glass Mat for off-grid."
+              }
+            />
+            <ProductTile
+              style={{ width: PTWidth }}
+              header={"All Black Panels"}
+              img={bluetoblackIcon}
+              text={
+                "Solar panels don't have to affect the aesthetic of your home. With all-black racking and solar panel options, your choice to save on energy can also add a sleek look to your roof. Most panel options are available in black - make sure to specify your colour preference when requesting a quote."
+              }
+            />

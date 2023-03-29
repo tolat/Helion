@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 0 2rem;
+  color: rgb(222, 222, 222);
+}
+
+.itemHeader {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.itemText {
+  line-height: 1.3rem;
+}

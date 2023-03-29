@@ -1,0 +1,20 @@
+.expandButton {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.expandButtonImg {
+  transition: all 0.1s linear;
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 100rem;
+}
+
+.expandButtonImg:hover {
+  margin-top: -0.15rem;
+  cursor: pointer;
+}

@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.text {
+  width: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  line-height: 1.7rem;
+}
+
+.grid {
+  display: grid;
+  padding: 0 3rem 2rem 3rem;
+  width: 100%;
+}
+
+.tileGridContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7rem;
+  width: 100%;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  padding: 2rem;
+}
