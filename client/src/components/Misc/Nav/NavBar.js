@@ -4,7 +4,6 @@ import logo from "../../../images/Helion_logo_nobg_light.png";
 import {
   selectTSML,
   handleToggleModal,
-  useScrollPosition,
   toggleNavDrawer,
 } from "../../../utils";
 import React from "react";
@@ -14,9 +13,7 @@ import { useState } from "react";
 
 const NavBar = (props) => {
   const { width } = useWindowSize();
-  const scrollPosition = useScrollPosition();
-  const reduceNavbarHeigthOnScroll = 2;
-  const initialBarHeight = 7;
+  const barHeight = "9rem";
   const burgerMenuDisplay = selectTSML(width, "flex");
   const buttonsDisplay = selectTSML(width, "none");
   const [isOpen, setOpen] = useState(false);
@@ -42,37 +39,12 @@ const NavBar = (props) => {
     
   };
 
-  function convertRemToPixels(rem) {
-    return (
-      rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
-    );
-  }
-
-  function capNumber(num, cap) {
-    return num > cap ? cap : num;
-  }
-
-  const bgOpacity = capNumber(scrollPosition / convertRemToPixels(10), 1);
-
-  const barHeight = `${
-    initialBarHeight -
-    capNumber(
-      (reduceNavbarHeigthOnScroll * scrollPosition) / convertRemToPixels(10),
-      reduceNavbarHeigthOnScroll
-    )
-  }rem`;
-
-  const quoteButtonBorder = scrollPosition > 50 ? "none" : "";
 
   const goHome = () =>{
     window.scroll(0,0)
   }
   return (
     <React.Fragment>
-      <div
-        style={{ opacity: bgOpacity, height: barHeight }}
-        className={styles.backgroundDiv}
-      />
       <div className={styles.container}>
         <div className={styles.navbar} style={{ height: barHeight }} onClick={goHome}>
           <img className={styles.navbarLogo} src={logo} alt="company logo" />
@@ -85,7 +57,7 @@ const NavBar = (props) => {
               text="Free Quote"
               onClick={onQuoteButtonClick}
               black={true}
-              style={{ border: quoteButtonBorder, borderRadius: "0", padding: "0.8rem", fontWeight: "bold" }}
+              style={{ borderRadius: "0", padding: "0.8rem", fontWeight: "bold" }}
             />
           </div>
         </div>

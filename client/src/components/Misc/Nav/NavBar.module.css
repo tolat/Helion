@@ -6,7 +6,7 @@
   max-width: 100%;
   height: var(--navBarHeight);
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
 }

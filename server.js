@@ -61,7 +61,7 @@ app.post("/quote", async (req, res) => {
     await transporter.sendMail({
       from: req.body.userEmail,
       to: "heliosolarsystems@gmail.com",
-      subject: "Quote Request From Heliosite",
+      subject: "Quote Request From Helion Site",
       text: `
       Project Address: ${req.body.userAddress}\n
       Client Name: ${req.body.userName}\n
