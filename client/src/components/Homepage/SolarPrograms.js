@@ -19,7 +19,8 @@ const SolarPrograms = (props) => {
   const padding = selectTSML(w,"0 0 1rem 0", dPad, dPad, dPad )
   const tile2Padding = selectTSML(w, "2rem 1rem 0 1rem")
   const firstTileMarginTop = selectTSML(w, "0rem")
-  const incentivesBorder = selectTSML(w, "none", "1px solid lightgrey","1px solid lightgrey","1px solid lightgrey")
+  const mainFontSize = selectTSML(w, "1.1rem")
+
   return (
     <CentralSection
       style={{
@@ -31,16 +32,15 @@ const SolarPrograms = (props) => {
       }}>
       <CentralTile
         style={{
-          backgroundColor: "rgb(243, 243, 243)",
+          backgroundColor: "rgb(247 247 247)",
           borderRadius: "3px",
           width: `${tileWidth}`,
           justifyContent: "space-between",
-          border: incentivesBorder,
           marginTop: firstTileMarginTop
         }}>
         <div
           id="solarProgramsSection"
-          style={{ display: "flex", flexDirection: "column" }}>
+          style={{ display: "flex", flexDirection: "column", fontSize: mainFontSize }}>
           <div className={styles.header}>
             Solar <b>Incentives</b>
           </div>
@@ -87,7 +87,7 @@ const SolarPrograms = (props) => {
           justifyContent: "space-between",
           padding: tile2Padding
         }}>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexDirection: "column",fontSize: mainFontSize }}>
           <div className={styles.header}>
             BC <b>Net Metering</b>
           </div>

@@ -6,7 +6,7 @@ import { selectTSML } from "../../utils";
 import styles from "./SolarSolutions.module.css";
 
 import banner2 from "../../images/solarspan4.jpg";
-import banner2_mobile from "../../images/solarspan5.jpeg"
+import banner2_mobile from "../../images/solarspan7.jpg"
 import stringInvImgDesktop from "../../images/strings_ground.jpeg";
 import stringInvImgMobile from "../../images/strings_ground_mobile.jpg"
 import microInvImg from "../../images/microinverter_roof.jpeg";
@@ -30,6 +30,7 @@ const SolarSolutions = (props) => {
   const stringInvImg = selectTSML(w,stringInvImgMobile,stringInvImgDesktop,stringInvImgDesktop,stringInvImgDesktop)
   const batteryImg = selectTSML(w, batteryImgMobile, batteryImgDesktop, batteryImgDesktop, batteryImgDesktop)
   const headerMarginTop = selectTSML(w, "0")
+  const headerTextFontSize = selectTSML(w, "1.2rem", "1.5rem", "1.5rem", "1.5rem")
 
   return (
     <BlackFade
@@ -45,7 +46,7 @@ const SolarSolutions = (props) => {
           </div>
           <div
             className={styles.text}
-            style={{ color: "white", fontSize: "1.5rem", paddingTop: "0" }}>
+            style={{ color: "white", fontSize: headerTextFontSize, paddingTop: "0" }}>
             Finding a line of solar equipment that fits your vision and budget
             is important - We offer a complete suite of solar solutions for
             grid-tied and off-grid solar projects that can address a variety

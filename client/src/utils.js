@@ -91,10 +91,8 @@ export const scrollToId = (Id, width) => {
       : 1;
   const offset = document.getElementById(Id).getBoundingClientRect().top;
 
-  console.log(width, zoom, zoom * (offset - 80), offset - 80);
-
   window.scrollTo({
-    top: zoom * 0.85 * (offset - 110),
+    top: zoom * 0.85 * (offset - 80),
     behavior: "smooth",
   });
 };
