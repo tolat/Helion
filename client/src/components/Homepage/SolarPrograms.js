@@ -17,7 +17,7 @@ const SolarPrograms = (props) => {
   const zoom = selectTSML(w, "0.7", "0.8", "", "");
   const margin = selectTSML(w,"0 0 1rem 0", dMarg, dMarg, dMarg )
   const padding = selectTSML(w,"0 0 1rem 0", dPad, dPad, dPad )
-  const tile2Padding = selectTSML(w, "2rem 1rem 0 1rem")
+  const tile2Padding = selectTSML(w, "2rem 2rem 0 2rem")
   const firstTileMarginTop = selectTSML(w, "0rem")
   const mainFontSize = selectTSML(w, "1.1rem")
 
