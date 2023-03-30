@@ -16,7 +16,15 @@ export const handleToggleModal = (setModalVisFunction) => {
   const hide = { o: "0", v: "hidden" };
   const show = { o: "1", v: "visible" };
   // eslint-disable-next-line
-  setModalVisFunction((prevState) => (prevState.o == "0" ? show : hide));
+  setModalVisFunction((prevState) => {
+    if (prevState.o == "0") {
+      document.body.style.overflowY = "hidden";
+      return show;
+    } else {
+      document.body.style.overflowY = "scroll";
+      return hide;
+    }
+  });
 };
 
 export const sendMessage = (
@@ -83,16 +91,10 @@ export const scrollToId = (Id, width) => {
     return;
   }
 
-  const zoom =
-    width < process.env.REACT_APP_BREAKPOINT_S
-      ? 0.8
-      : width < process.env.REACT_APP_BREAKPOINT_T
-      ? 0.7
-      : 1;
   const offset = document.getElementById(Id).getBoundingClientRect().top;
 
   window.scrollTo({
-    top: zoom * 0.85 * (offset - 80),
+    top: offset,
     behavior: "smooth",
   });
 };
@@ -103,11 +105,11 @@ export const toggleNavDrawer = () => {
   // eslint-disable-next-line
   if (navDrawer.style.right != "0px") {
     navDrawer.style.right = "0px";
-    document.body.style.overflowY = "hidden"
+    document.body.style.overflowY = "hidden";
     //navDrawerBlackout.style.display = "block";
   } else {
     navDrawer.style.right = "-30rem";
-    document.body.style.overflowY = "scroll"
+    document.body.style.overflowY = "scroll";
     //navDrawerBlackout.style.display = "none";
   }
 };
@@ -119,6 +121,6 @@ export const clickBurgerMenuIcon = (buttonActive = false) => {
   }
 };
 
-export const isMobile = (width) =>{
-  return width < process.env.REACT_APP_BREAKPOINT_T
-}
+export const isMobile = (width) => {
+  return width < process.env.REACT_APP_BREAKPOINT_T;
+};

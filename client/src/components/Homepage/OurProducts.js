@@ -5,23 +5,26 @@ import { selectTSML } from "../../utils";
 
 const OurProducts = (props) => {
   const { width } = useWindowSize();
-  const zoom = selectTSML(width, "0.7", "0.8", "", "");
+  const headerFontSize = selectTSML(width, "1.8rem", "2.2rem", "2.5rem", "2.5rem");
+  const carouselMargin = selectTSML(width,"3rem 1.4rem 3rem 1.4rem","4rem 2rem 4rem 2rem","4rem 0rem 5rem 0rem","4rem 0rem 5rem 0rem" )
   return (
     <CentralSection
       style={{
-        zoom: zoom,
         flexDirection: "column",
-      }} bgColor = "rgb(247 247 247)">
+      }}
+      bgColor="rgb(247 247 247)"
+    >
       <div
         style={{
           width: "100%",
           textAlign: "center",
-          fontSize: "2.5rem",
-          marginTop: "3rem",
-        }}>
+          fontSize: headerFontSize,
+          marginTop: "2rem",
+        }}
+      >
         Our <b>Products</b>
       </div>
-      <div style={{ margin: "4rem 0rem 5rem 0rem" }}>
+      <div style={{ margin: carouselMargin }}>
         <ProductCarousel />
       </div>
     </CentralSection>

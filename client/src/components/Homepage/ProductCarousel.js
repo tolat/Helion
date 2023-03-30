@@ -8,6 +8,8 @@ import aps_logo from "../../images/product_logos/aps_logo.png";
 import kinetic_logo from "../../images/product_logos/kinetic_logo.png";
 import cadsol_logo from "../../images/product_logos/cadsol_logo.png";
 import schneider_logo from "../../images/product_logos/schneider_logo.png";
+import { selectTSML } from "../../utils";
+import { useWindowSize } from "usehooks-ts";
 
 const imageLinks = [
   longi_logo,
@@ -20,12 +22,14 @@ const imageLinks = [
 ];
 
 const ProductCarousel = (props) => {
+  const { width } = useWindowSize();
+  const logoHeight = selectTSML(width, "40rem", "40rem", "60rem", "60rem")
   // Alice carousel for products
   const handleDragStart = (e) => e.preventDefault();
   const productCrouselItems = imageLinks.map((l) => (
     <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
       <img
-        height="60rem"
+        height={logoHeight}
         src={l}
         alt="poduct-logo"
         onDragStart={handleDragStart}></img>

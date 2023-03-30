@@ -14,12 +14,16 @@ const SolarPrograms = (props) => {
   const tileFlexDirection = selectTSML(w, "column", "column", "row", "row");
   const tileWidth = selectTSML(w, "100%", "100%", "50%", "50%");
   const nm_graphic = selectTSML(w, nm_ver, nm_ver, nm_hor, nm_hor);
-  const zoom = selectTSML(w, "0.7", "0.8", "", "");
   const margin = selectTSML(w,"0 0 1rem 0", dMarg, dMarg, dMarg )
   const padding = selectTSML(w,"0 0 1rem 0", dPad, dPad, dPad )
-  const tile2Padding = selectTSML(w, "2rem 2rem 0 2rem")
+  const tile2Padding = selectTSML(w, "1rem 1rem 0 1rem")
   const firstTileMarginTop = selectTSML(w, "0rem")
-  const mainFontSize = selectTSML(w, "1.1rem")
+  
+  const mainFontSize = selectTSML(w, "0.8rem")
+  const incentiveFontSize = selectTSML(w, "1.2rem")
+  const headerFontSize = selectTSML(w, "1.8rem")
+  const headerMargin = selectTSML(w, "1rem 0 0rem 0")
+  const containerPadding = selectTSML(w, "1rem")
 
   return (
     <CentralSection
@@ -27,7 +31,7 @@ const SolarPrograms = (props) => {
         flexDirection: `${tileFlexDirection}`,
         margin: margin,
         padding: padding,
-        zoom: zoom,
+       
         
       }}>
       <CentralTile
@@ -36,21 +40,22 @@ const SolarPrograms = (props) => {
           borderRadius: "3px",
           width: `${tileWidth}`,
           justifyContent: "space-between",
-          marginTop: firstTileMarginTop
+          marginTop: firstTileMarginTop,
+          padding: containerPadding
         }}>
         <div
           id="solarProgramsSection"
           style={{ display: "flex", flexDirection: "column", fontSize: mainFontSize }}>
-          <div className={styles.header}>
+          <div className={styles.header} style={{fontSize: headerFontSize, margin: headerMargin }}>
             Solar <b>Incentives</b>
           </div>
-          <div className={styles.incentive}>$5,000 Greener Homes Grant</div>
+          <div className={styles.incentive} style={{fontSize: incentiveFontSize}}>$5,000 Greener Homes Grant</div>
           <div className={styles.text}>
             The Canada greener homes grant provides Canadians with $1 per kW of
             Solar installed, up to a maximum of $5,000. To receive the grant you
             must own your home, and it must be your primary residence.
           </div>
-          <div className={styles.incentive}>
+          <div className={styles.incentive} style={{fontSize: incentiveFontSize}}>
             $40,000 Interest-Free Greener Homes Loan
           </div>
           <div className={styles.text}>
@@ -73,7 +78,7 @@ const SolarPrograms = (props) => {
           <br />
           <br />
         </div>
-        <div>
+        <div style={{fontSize: mainFontSize, padding: containerPadding}}>
           Click{" "}
           <a href="https://www.nrcan.gc.ca/energy-efficiency/homes/canada-greener-homes-grant/23441">
             HERE
@@ -88,7 +93,7 @@ const SolarPrograms = (props) => {
           padding: tile2Padding
         }}>
         <div style={{ display: "flex", flexDirection: "column",fontSize: mainFontSize }}>
-          <div className={styles.header}>
+          <div className={styles.header} style={{fontSize: headerFontSize, margin: headerMargin}}>
             BC <b>Net Metering</b>
           </div>
           <div className={styles.text}>
@@ -115,7 +120,7 @@ const SolarPrograms = (props) => {
           </div>
          
         </div>
-        <div>
+        <div style={{fontSize: mainFontSize, padding: containerPadding}}>
           Click{" "}
           <a href="https://app.bchydro.com/accounts-billing/electrical-connections/net-metering.html">
             HERE

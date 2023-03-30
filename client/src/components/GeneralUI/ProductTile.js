@@ -11,7 +11,7 @@ const ProductTile = (props) => {
         }}
         alt="string inverter icon"
       />
-      <div className={styles.header}>{props.header}</div>
+      <div className={styles.header} style={props.headerStyles}>{props.header}</div>
       <div className={styles.text} style={props.textStyles}>
         {props.text}
       </div>

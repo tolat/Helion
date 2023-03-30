@@ -8,13 +8,12 @@ const Footer = (props) => {
   const w = props.viewportWidth;
   const flexDirection = selectTSML(w, "column", "column", "row", "row");
   const textMaxWidth = selectTSML(w, "", "", "35rem", "40rem");
-  const zoom = selectTSML(w, "0.7", "0.8", "", "");
   const marginTop = selectTSML(w, "3rem")
+  const mainFontSize = selectTSML(w, "0.8rem")
   return (
     <FullWidthSection
       style={{
         backgroundColor: "rgb(41,41,41)",
-        zoom: zoom,
       }}
     >
       <CentralSection>
@@ -23,7 +22,7 @@ const Footer = (props) => {
           style={{ flexDirection: flexDirection, marginTop: marginTop }}
         >
           <FooterTile key="ft1" header="Contact">
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", flexDirection: "column", fontSize: mainFontSize }}>
               <div>604.723.5351</div>
               <div>helionsolarsystems@gmail.com</div>
             </div>
@@ -33,7 +32,7 @@ const Footer = (props) => {
             style={{ maxWidth: textMaxWidth }}
             header="About"
           >
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", flexDirection: "column", fontSize: mainFontSize }}>
               <div>
                 Helion Solar offers turnkey residential solar installation
                 service, pre-wiring for new construction projects, as well as

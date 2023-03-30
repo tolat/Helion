@@ -6,15 +6,20 @@ import { selectTSML } from "../../utils";
 const FAQ = (props) => {
   const w = props.viewportWidth;
   const templateCols = selectTSML(w, "100%", "100%", "50% 50%", "50% 50%");
-  const zoom = selectTSML(w, "0.7", "0.8", "", "");
+  const mainFontSize = selectTSML(w, "0.8rem")
+  const incentiveFontSize = selectTSML(w, "1.2rem")
+  const headerFontSize = selectTSML(w, "1.8rem", "2rem", "2rem", "2rem")
+  const headerMargin = selectTSML(w, "1rem 0 0rem 0")
+  const containerPadding = selectTSML(w, "1.4rem 1.4rem 0 1.4rem")
+  const mainLineHeight = selectTSML(w, "unset")
   return (
     <CentralSection
       id="FAQsection"
-      style={{ zoom: zoom, flexDirection: "column" }}>
+      style={{ flexDirection: "column" }}>
       <div
         style={{
           width: "100%",
-          fontSize: "2rem",
+          fontSize: headerFontSize,
           textAlign: "center",
           fontWeight: "bold",
           marginTop: "3rem"
@@ -52,8 +57,8 @@ const FAQ = (props) => {
             a: "Despite the actual installation of solar panels taking only 2-4 days typically, solar projects have a timeline of 3-12 weeks (depending on regional permitting requirements). The majority of delays come when a building permit is required, which can alone take anywhere from 1 to 8 weeks depending on the municipality. We make sure to give realistic timelines based on a region's permit requirements.",
           },
         ].map((item) => (
-          <CentralTile key={item.key}>
-            <QnaCard question={item.q} answer={item.a} />
+          <CentralTile key={item.key} style={{padding: containerPadding }}>
+            <QnaCard question={item.q} answer={item.a} textStyle={{fontSize: mainFontSize, lineHeight: mainLineHeight}} />
           </CentralTile>
         ))}
       </div>

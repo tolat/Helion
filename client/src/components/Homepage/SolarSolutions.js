@@ -22,7 +22,6 @@ const SolarSolutions = (props) => {
   const tileWidth = selectTSML(w, "85%", "85%", "22%", "22%");
   const textAlign = selectTSML(w, "", "", "", "");
   const tileImgHeight = selectTSML(w, "10rem", "20rem", "15rem", "15rem");
-  const zoom = selectTSML(w, "0.7", "0.8", "", "");
   const containerPadding = selectTSML(w, "0")
   const backgroundAttachment = selectTSML(w, "scroll", "fixed", "fixed", "fixed")
   const backgroundImage = selectTSML(w, banner2_mobile, banner2, banner2, banner2)
@@ -30,7 +29,16 @@ const SolarSolutions = (props) => {
   const stringInvImg = selectTSML(w,stringInvImgMobile,stringInvImgDesktop,stringInvImgDesktop,stringInvImgDesktop)
   const batteryImg = selectTSML(w, batteryImgMobile, batteryImgDesktop, batteryImgDesktop, batteryImgDesktop)
   const headerMarginTop = selectTSML(w, "0")
-  const headerTextFontSize = selectTSML(w, "1.2rem", "1.5rem", "1.5rem", "1.5rem")
+
+  const headerTextFontSize = selectTSML(w, "0.8rem", "1.5rem", "1.5rem", "1.5rem")
+  const tileTextFontSize = selectTSML(w, "0.8rem")
+  const headerFontSize = selectTSML(w, "1.8rem", "2.3rem","2.5rem","2.5rem")
+  const headerPadding = selectTSML(w, "2rem 0 1rem 1.4rem","2rem 0 1rem 2rem","4rem 0 0rem 3rem","4rem 0 0rem 3rem")
+  const blurbPadding = selectTSML( w, "0rem 0 1rem 1.4rem")
+  const tileHeaderFontSize = selectTSML(w, "1.2rem")
+  const headerTextLineHeight = selectTSML(w, "unset")
+  const headerTilePadding = selectTSML(w, "1rem 1rem 0.4rem 1rem")
+  const textTilePadding = selectTSML(w, "0rem 1rem 1rem 1rem")
 
   return (
     <BlackFade
@@ -38,15 +46,15 @@ const SolarSolutions = (props) => {
       backgroundOpacity={backgroundOpacity}
       backgroundAttachment={backgroundAttachment}>
       <FullWidthSection>
-        <div style={{ maxWidth: "90rem", zoom: zoom }}>
+        <div style={{ maxWidth: "90rem"}}>
           <div
             className={styles.header}
-            style={{ color: "white", fontSize: "2.5rem", marginTop: headerMarginTop}}>
+            style={{ color: "white", fontSize: headerFontSize, marginTop: headerMarginTop, padding: headerPadding}}>
             Solar <b>Solutions</b>{" "}
           </div>
           <div
             className={styles.text}
-            style={{ color: "white", fontSize: headerTextFontSize, paddingTop: "0" }}>
+            style={{ color: "white", fontSize: headerTextFontSize, padding: blurbPadding}}>
             Finding a line of solar equipment that fits your vision and budget
             is important - We offer a complete suite of solar solutions for
             grid-tied and off-grid solar projects that can address a variety
@@ -91,14 +99,14 @@ const SolarSolutions = (props) => {
             <ProductTile
               style={{
                 width: tileWidth,
-                zoom: zoom,
               }}
               imgHeight={tileImgHeight}
               key={data.id}
               header={data.h}
               img={data.img}
               text={data.t}
-              textStyles={{ textAlign: textAlign }}
+              textStyles={{ textAlign: textAlign, fontSize: tileTextFontSize, lineHeight: headerTextLineHeight, padding: textTilePadding }}
+              headerStyles={{fontSize: tileHeaderFontSize, padding: headerTilePadding}}
             />
           ))}
         </div>
