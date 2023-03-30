@@ -11,8 +11,7 @@ const OurProducts = (props) => {
       style={{
         zoom: zoom,
         flexDirection: "column",
-        borderBottom: "1px solid grey",
-      }}>
+      }} bgColor = "rgb(242 242 243)">
       <div
         style={{
           width: "100%",

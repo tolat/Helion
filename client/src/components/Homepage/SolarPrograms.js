@@ -18,8 +18,8 @@ const SolarPrograms = (props) => {
   const margin = selectTSML(w,"0 0 1rem 0", dMarg, dMarg, dMarg )
   const padding = selectTSML(w,"0 0 1rem 0", dPad, dPad, dPad )
   const tile2Padding = selectTSML(w, "2rem 1rem 0 1rem")
-  const firstTileMarginTop = selectTSML(w, "1rem")
-
+  const firstTileMarginTop = selectTSML(w, "0rem")
+  const incentivesBorder = selectTSML(w, "none", "1px solid lightgrey","1px solid lightgrey","1px solid lightgrey")
   return (
     <CentralSection
       style={{
@@ -31,12 +31,11 @@ const SolarPrograms = (props) => {
       }}>
       <CentralTile
         style={{
-          backgroundColor: "rgb(233, 247, 233)",
+          backgroundColor: "rgb(243, 243, 243)",
           borderRadius: "3px",
           width: `${tileWidth}`,
           justifyContent: "space-between",
-          border: "1px solid lightgrey",
-          boxShadow: "rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px",
+          border: incentivesBorder,
           marginTop: firstTileMarginTop
         }}>
         <div

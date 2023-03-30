@@ -16,6 +16,8 @@ const FAQ = (props) => {
           width: "100%",
           fontSize: "2rem",
           textAlign: "center",
+          fontWeight: "bold",
+          marginTop: "3rem"
         }}>
         FAQ
       </div>

@@ -22,7 +22,7 @@
 .tileGridContainer {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
   width: 100%;
   align-items: center;
   grid-template-columns: 50% 50%;

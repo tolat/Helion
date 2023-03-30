@@ -14,7 +14,6 @@ const Banner1 = (props) => {
   const minHeight = selectTSML(w, "100vh", "28rem", "28rem", "46rem");
   const fontSize = selectTSML(w, "1.5rem", "2rem", "2.2rem","");
   const nebcepJustify = selectTSML(w, "center", "end", "", "");
-  const expandButtonScale = selectTSML(w, "1.5", "", "", "");
   const expandButtonMargin = selectTSML(w, "4rem", "", "", "");
   const textAlign = selectTSML(w, "left");
   const nabcepDisplay = selectTSML(w, "");
@@ -56,9 +55,7 @@ const Banner1 = (props) => {
           <div className={styles.expandButtonContainer}>
             <ExpandButton
               style={{
-                zoom: expandButtonScale,
-                marginBottom: expandButtonMargin,
-                
+                marginBottom: expandButtonMargin
               }}
               scrollToId="solarProgramsSection"
             />

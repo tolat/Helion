@@ -13,7 +13,7 @@ import { useState } from "react";
 
 const NavBar = (props) => {
   const { width } = useWindowSize();
-  const barHeight = "9rem";
+  const barHeight = selectTSML(width, "6rem", "9rem", "9rem", "9rem");
   const burgerMenuDisplay = selectTSML(width, "flex");
   const buttonsDisplay = selectTSML(width, "none");
   const [isOpen, setOpen] = useState(false);
@@ -43,6 +43,7 @@ const NavBar = (props) => {
   const goHome = () =>{
     window.scroll(0,0)
   }
+  
   return (
     <React.Fragment>
       <div className={styles.container}>
@@ -57,7 +58,7 @@ const NavBar = (props) => {
               text="Free Quote"
               onClick={onQuoteButtonClick}
               black={true}
-              style={{ borderRadius: "0", padding: "0.8rem", fontWeight: "bold" }}
+              style={{ borderRadius: "2px", padding: "0.8rem", fontWeight: "bold" }}
             />
           </div>
         </div>

@@ -9,6 +9,7 @@ const Footer = (props) => {
   const flexDirection = selectTSML(w, "column", "column", "row", "row");
   const textMaxWidth = selectTSML(w, "", "", "35rem", "40rem");
   const zoom = selectTSML(w, "0.7", "0.8", "", "");
+  const marginTop = selectTSML(w, "3rem")
   return (
     <FullWidthSection
       style={{
@@ -19,12 +20,12 @@ const Footer = (props) => {
       <CentralSection>
         <div
           className={styles.container}
-          style={{ flexDirection: flexDirection }}
+          style={{ flexDirection: flexDirection, marginTop: marginTop }}
         >
           <FooterTile key="ft1" header="Contact">
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div>604.723.5351</div>
-              <div>heliosolarsystems@gmail.com</div>
+              <div>helionsolarsystems@gmail.com</div>
             </div>
           </FooterTile>
           <FooterTile
@@ -34,7 +35,7 @@ const Footer = (props) => {
           >
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div>
-                Helio Solar offers turnkey residential solar installation
+                Helion Solar offers turnkey residential solar installation
                 service, pre-wiring for new construction projects, as well as
                 solar energy consultation. All of our staff are certified NABCEP
                 solar PV associates, and we guarantee the quality of our
@@ -44,9 +45,7 @@ const Footer = (props) => {
                 government is offering.
               </div>
               <br />
-              <div>
-                <b>Helio Solar is a division of Lataritech (707291126BC0001)</b>
-              </div>
+              
             </div>
           </FooterTile>
           <FooterTile
@@ -75,7 +74,7 @@ const Footer = (props) => {
           margin: "10rem 0 1rem 0",
         }}
       >
-        <div>&copy;Copyright Lataritech 2022</div>
+        <div>&copy;Copyright Helion Solar 2022</div>
       </div>
     </FullWidthSection>
   );

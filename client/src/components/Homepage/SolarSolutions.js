@@ -29,6 +29,7 @@ const SolarSolutions = (props) => {
   const backgroundOpacity = selectTSML(w, "0.7","0.5","0.5","0.5")
   const stringInvImg = selectTSML(w,stringInvImgMobile,stringInvImgDesktop,stringInvImgDesktop,stringInvImgDesktop)
   const batteryImg = selectTSML(w, batteryImgMobile, batteryImgDesktop, batteryImgDesktop, batteryImgDesktop)
+  const headerMarginTop = selectTSML(w, "0")
 
   return (
     <BlackFade
@@ -39,7 +40,7 @@ const SolarSolutions = (props) => {
         <div style={{ maxWidth: "90rem", zoom: zoom }}>
           <div
             className={styles.header}
-            style={{ color: "white", fontSize: "2.5rem", marginTop: "4rem" }}>
+            style={{ color: "white", fontSize: "2.5rem", marginTop: headerMarginTop}}>
             Solar <b>Solutions</b>{" "}
           </div>
           <div
