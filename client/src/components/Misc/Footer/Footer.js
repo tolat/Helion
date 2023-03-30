@@ -74,7 +74,7 @@ const Footer = (props) => {
           margin: "10rem 0 1rem 0",
         }}
       >
-        <div>&copy;Copyright Helion Solar 2022</div>
+        <div>&copy;Copyright Helion Solar 2023</div>
       </div>
     </FullWidthSection>
   );

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0ea06297.css",
-    "main.js": "/static/js/main.6e85f913.js",
+    "main.js": "/static/js/main.3f9440b7.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
     "static/media/solarspan1_medium.jpg": "/static/media/solarspan1_medium.e09e876bec9a2260c0c8.jpg",
     "static/media/solarspan1_mobile.jpg": "/static/media/solarspan1_mobile.f7b4331b7969b29288fb.jpg",
@@ -27,11 +27,11 @@
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
     "main.0ea06297.css.map": "/static/css/main.0ea06297.css.map",
-    "main.6e85f913.js.map": "/static/js/main.6e85f913.js.map",
+    "main.3f9440b7.js.map": "/static/js/main.3f9440b7.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ea06297.css",
-    "static/js/main.6e85f913.js"
+    "static/js/main.3f9440b7.js"
   ]
 }
