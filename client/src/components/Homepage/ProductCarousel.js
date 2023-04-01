@@ -11,6 +11,8 @@ import schneider_logo from "../../images/product_logos/schneider_logo.png";
 import { selectTSML } from "../../utils";
 import { useWindowSize } from "usehooks-ts";
 
+import React from "react";
+
 const imageLinks = [
   longi_logo,
   enphase_logo,
@@ -54,4 +56,4 @@ const ProductCarousel = (props) => {
   );
 };
 
-export default ProductCarousel;
+export default React.memo(ProductCarousel);
