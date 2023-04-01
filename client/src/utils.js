@@ -21,9 +21,11 @@ export const handleToggleModal = (setModalVisFunction) => {
       document.body.style.overflowY = "hidden";
       document.body.style.touchAction = "none";
       document.body.style.webkitOverflowScrolling = "none";
+      document.body.style.height = "100vh"
 
       return show;
     } else {
+      document.body.style.height = "unset"
       document.body.style.overflowY = "scroll";
       document.body.style.touchAction = "unset";
       document.body.style.webkitOverflowScrolling = "unset";
