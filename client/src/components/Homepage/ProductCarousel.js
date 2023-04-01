@@ -24,8 +24,8 @@ const imageLinks = [
 ];
 
 const ProductCarousel = React.memo((props) => {
-  const { width } = useWindowSize();
-  const logoHeight = selectTSML(width, "40rem", "40rem", "60rem", "60rem")
+  //const { width } = useWindowSize();
+  //const logoHeight = selectTSML(width, "40rem", "40rem", "60rem", "60rem")
   
   window.alert("rendering carousel!")
   // Alice carousel for products
@@ -33,7 +33,7 @@ const ProductCarousel = React.memo((props) => {
   const productCrouselItems = imageLinks.map((l) => (
     <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
       <img
-        height={logoHeight}
+        height="40rem"
         src={l}
         alt="poduct-logo"
         onDragStart={handleDragStart}></img>
