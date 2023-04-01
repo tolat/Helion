@@ -23,7 +23,7 @@ const imageLinks = [
   schneider_logo,
 ];
 
-const ProductCarousel = (props) => {
+const ProductCarousel = React.memo((props) => {
   const { width } = useWindowSize();
   const logoHeight = selectTSML(width, "40rem", "40rem", "60rem", "60rem")
   
@@ -56,6 +56,6 @@ const ProductCarousel = (props) => {
       }}
     />
   );
-};
+});
 
-export default React.memo(ProductCarousel);
+export default ProductCarousel;

@@ -2,7 +2,6 @@ import { useWindowSize } from "usehooks-ts";
 import CentralSection from "../GeneralUI/CentralSection";
 import ProductCarousel from "./ProductCarousel";
 import { selectTSML } from "../../utils";
-import React from "react";
 
 const OurProducts = (props) => {
   const { width } = useWindowSize();
@@ -32,4 +31,4 @@ const OurProducts = (props) => {
   );
 };
 
-export default React.memo(OurProducts);
+export default OurProducts;
