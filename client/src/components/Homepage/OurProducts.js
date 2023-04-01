@@ -25,7 +25,7 @@ const OurProducts = (props) => {
         Our <b>Products</b>
       </div>
       <div style={{ margin: carouselMargin }}>
-        <ProductCarousel />
+        <ProductCarousel width={width}/>
       </div>
     </CentralSection>
   );
