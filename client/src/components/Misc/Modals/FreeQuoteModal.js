@@ -126,6 +126,7 @@ const FreeQuoteModal = (props) => {
           style={{
             maskImage: scrollMaskImage,
             WebkitMaskImage: scrollMaskImage,
+            zoom: props.zoom
           }}>
           <div className={modalStyles.sectionContainer}>
             <div className={modalStyles.sectionHeader}>

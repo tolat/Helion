@@ -11,6 +11,8 @@ const Footer = (props) => {
   const marginTop = selectTSML(w, "3rem")
   const mainFontSize = selectTSML(w, "0.8rem")
   return (
+    <div style={{zoom: props.zoom}}>
+
     <FullWidthSection
       style={{
         backgroundColor: "rgb(41,41,41)",
@@ -76,6 +78,7 @@ const Footer = (props) => {
         <div>&copy;Copyright Helion Solar 2023</div>
       </div>
     </FullWidthSection>
+    </div>
   );
 };
 

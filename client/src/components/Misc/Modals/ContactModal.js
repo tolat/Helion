@@ -93,6 +93,8 @@ const ContactModal = (props) => {
   };
 
   return (
+   
+
     <Modal
       viewportWidth={props.viewportWidth}
       modalVis={props.modalVis}
@@ -107,6 +109,7 @@ const ContactModal = (props) => {
           style={{
             maskImage: scrollMaskImage,
             WebkitMaskImage: scrollMaskImage,
+            zoom: props.zoom
           }}>
           <div className={modalStyles.sectionContainer}>
             <div className={modalStyles.sectionHeader}>
@@ -171,6 +174,7 @@ const ContactModal = (props) => {
             {!isMobile(w)?<SubmitButton buttonFontSize={buttonFontSize} iconDisplay={iconDisplay} spinnerDisplay={spinnerDisplay}/>:null }       
       </form>
     </Modal>
+  
   );
 };
 

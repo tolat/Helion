@@ -24,6 +24,8 @@ function App() {
     v: "hidden",
   });
 
+  const totalZoom = selectTSML(width, "1", "0.75", "0.80", "1")
+
   return (
     <div className={`${styles.AppContainer} noscroll`}>
       <Flash id="appFlash" />
@@ -31,11 +33,13 @@ function App() {
         viewportWidth={width}
         modalVis={quoteModalVis}
         setModalVis={setQuoteModalVis}
+        zoom={totalZoom}
       />
       <ContactModal
         viewportWidth={width}
         modalVis={contactModalVis}
         setModalVis={setContactModalVis}
+        zoom={totalZoom}
       />
       <NavDrawer
         setContactModalVis={setContactModalVis}
@@ -46,17 +50,18 @@ function App() {
           viewportWidth={width}
           setQuoteModalVis={setQuoteModalVis}
           setContactModalVis={setContactModalVis}
+          zoom={totalZoom}
         />
-        <Banner1 viewportWidth={width} />
-        <SolarPrograms viewportWidth={width} />
-        <SolarSolutions viewportWidth={width} />
-        <OurProducts />
-        <FAQ viewportWidth={width} />
+        <Banner1 viewportWidth={width} zoom={totalZoom}/>
+        <SolarPrograms viewportWidth={width} zoom={totalZoom}/>
+        <SolarSolutions viewportWidth={width} zoom={totalZoom}/>
+        <OurProducts zoom={totalZoom}/>
+        <FAQ viewportWidth={width} zoom={totalZoom}/>
         {/* <RequestQuoteButton
           viewportWidth={width}
           setModalVis={setQuoteModalVis}
         /> */}
-        <Footer viewportWidth={width} />
+        <Footer viewportWidth={width} zoom={totalZoom}/>
       </div>
     </div>
   );

@@ -41,6 +41,8 @@ const SolarSolutions = (props) => {
   const textTilePadding = selectTSML(w, "0rem 1rem 1rem 1rem")
 
   return (
+    <div style={{zoom: props.zoom}}>
+
     <BlackFade
       backgroundImage={backgroundImage}
       backgroundOpacity={backgroundOpacity}
@@ -112,6 +114,7 @@ const SolarSolutions = (props) => {
         </div>
       </FullWidthSection>
     </BlackFade>
+    </div>
   );
 };
 

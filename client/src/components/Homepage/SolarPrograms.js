@@ -3,9 +3,11 @@ import CentralSection from "../GeneralUI/CentralSection";
 import styles from "./SolarPrograms.module.css";
 import { selectTSML } from "../../utils";
 
-import greenerhomes_graphic from "../../images/greener_homes_graphic.png";
+import gh_hor from "../../images/greener_homes_graphic.png";
+import gh_wide from "../../images/GH-journey-map.png";
 import nm_hor from "../../images/netmetering_graphic.png";
 import nm_ver from "../../images/netmetering_graphic_vertical.jpg";
+import nm_wide from "../../images/netmetering_graphic_wide.png";
 
 const SolarPrograms = (props) => {
   const w = props.viewportWidth;
@@ -13,7 +15,8 @@ const SolarPrograms = (props) => {
   const dPad = "0 2rem 0 2rem"
   const tileFlexDirection = selectTSML(w, "column", "column", "row", "row");
   const tileWidth = selectTSML(w, "100%", "100%", "50%", "50%");
-  const nm_graphic = selectTSML(w, nm_ver, nm_ver, nm_hor, nm_hor);
+  const nm_graphic = selectTSML(w, nm_ver, nm_wide, nm_hor, nm_hor);
+  const gh_graphic = selectTSML(w, gh_hor, gh_wide, gh_hor, gh_hor)
   const margin = selectTSML(w,"0 0 1rem 0", dMarg, dMarg, dMarg )
   const padding = selectTSML(w,"0 0 1rem 0", dPad, dPad, dPad )
   const tile2Padding = selectTSML(w, "1rem 1rem 0 1rem")
@@ -26,6 +29,7 @@ const SolarPrograms = (props) => {
   const containerPadding = selectTSML(w, "1rem")
 
   return (
+    <div style={{zoom: props.zoom}}>
     <CentralSection
       style={{
         flexDirection: `${tileFlexDirection}`,
@@ -72,7 +76,7 @@ const SolarPrograms = (props) => {
             <br />
           </div>
           <div style={{display: "flex"}}>
-          <img style={{display: "block", width:"100%"}} src={greenerhomes_graphic} alt="greener homes path graphic" />
+          <img style={{display: "block", width:"100%"}} src={gh_graphic} alt="greener homes path graphic" />
 
           </div>
           <br />
@@ -129,6 +133,7 @@ const SolarPrograms = (props) => {
         </div>
       </CentralTile>
     </CentralSection>
+    </div>
   );
 };
 

@@ -45,6 +45,8 @@ const NavBar = (props) => {
   }
   
   return (
+    <div style={{zoom: props.zoom}}>
+
     <React.Fragment>
       <div className={styles.container}>
         <div className={styles.navbar} style={{ height: barHeight }} onClick={goHome}>
@@ -71,6 +73,7 @@ const NavBar = (props) => {
         <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
     </React.Fragment>
+    </div>
   );
 };
 

@@ -13,6 +13,8 @@ const FAQ = (props) => {
   const containerPadding = selectTSML(w, "1.4rem 1.4rem 0 1.4rem")
   const mainLineHeight = selectTSML(w, "unset")
   return (
+    <div style={{zoom: props.zoom}}>
+
     <CentralSection
       id="FAQsection"
       style={{ flexDirection: "column" }}>
@@ -63,6 +65,7 @@ const FAQ = (props) => {
         ))}
       </div>
     </CentralSection>
+    </div>
   );
 };
 

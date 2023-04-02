@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.813e92bc.css",
-    "main.js": "/static/js/main.81d707f7.js",
+    "main.js": "/static/js/main.b0fec103.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
     "static/media/solarspan1_medium.jpg": "/static/media/solarspan1_medium.e09e876bec9a2260c0c8.jpg",
     "static/media/solarspan1_mobile.jpg": "/static/media/solarspan1_mobile.f7b4331b7969b29288fb.jpg",
@@ -9,9 +9,11 @@
     "static/media/blackpanels1.jpeg": "/static/media/blackpanels1.0e017dc2466f30fd6b33.jpeg",
     "static/media/netmetering_graphic.png": "/static/media/netmetering_graphic.ab4d14b9b1de9884b21d.png",
     "static/media/solarspan4.jpg": "/static/media/solarspan4.d64e6304a2aa8103601f.jpg",
+    "static/media/netmetering_graphic_wide.png": "/static/media/netmetering_graphic_wide.7e5ced942c8bad379a90.png",
     "static/media/Helion_logo_nobg_light.png": "/static/media/Helion_logo_nobg_light.bf0df3b22cdff577e117.png",
     "static/media/netmetering_graphic_vertical.jpg": "/static/media/netmetering_graphic_vertical.42b742ccd01cb708ce9f.jpg",
     "static/media/greener_homes_graphic.png": "/static/media/greener_homes_graphic.936778e9ada5ec5512e3.png",
+    "static/media/GH-journey-map.png": "/static/media/GH-journey-map.d71715c2c6be99113a19.png",
     "static/media/solarspan7.jpg": "/static/media/solarspan7.5756ffc19b8421917764.jpg",
     "static/media/pv_assoc_seal.png": "/static/media/pv_assoc_seal.35338c93bff7f6636822.png",
     "static/media/microinverter_roof.jpeg": "/static/media/microinverter_roof.79d5f122f4eca0555eed.jpeg",
@@ -27,11 +29,11 @@
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
     "main.813e92bc.css.map": "/static/css/main.813e92bc.css.map",
-    "main.81d707f7.js.map": "/static/js/main.81d707f7.js.map",
+    "main.b0fec103.js.map": "/static/js/main.b0fec103.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.813e92bc.css",
-    "static/js/main.81d707f7.js"
+    "static/js/main.b0fec103.js"
   ]
 }
