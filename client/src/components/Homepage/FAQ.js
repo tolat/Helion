@@ -12,6 +12,8 @@ const FAQ = (props) => {
   const headerMargin = selectTSML(w, "1rem 0 0rem 0")
   const containerPadding = selectTSML(w, "1.4rem 1.4rem 0 1.4rem")
   const mainLineHeight = selectTSML(w, "unset")
+  const marginTop = selectTSML(w, "2rem", "0rem", "0rem", "0rem")
+
   return (
     <div style={{zoom: props.zoom}}>
 
@@ -24,7 +26,7 @@ const FAQ = (props) => {
           fontSize: headerFontSize,
           textAlign: "center",
           fontWeight: "bold",
-          marginTop: "3rem"
+          marginTop: marginTop
         }}>
         FAQ
       </div>
@@ -34,8 +36,7 @@ const FAQ = (props) => {
           gridTemplateColumns: templateCols,
           justifyContent: "center",
           width: "100%",
-
-          paddingBottom: "2rem",
+          paddingBottom: "3rem",
         }}>
         {[
           {
@@ -58,6 +59,17 @@ const FAQ = (props) => {
             q: "How long will it take to install solar on my home?",
             a: "Despite the actual installation of solar panels taking only 2-4 days typically, solar projects have a timeline of 3-12 weeks (depending on regional permitting requirements). The majority of delays come when a building permit is required, which can alone take anywhere from 1 to 8 weeks depending on the municipality. We make sure to give realistic timelines based on a region's permit requirements.",
           },
+          {
+            key: "faq5",
+            q: "Why do solar quotes vary so much from compan to company?",
+            a: "Depending on the supplier, companies may be paying more or less for equipment. Market and supply chain volatility can also affect equipment prices, which can even change quoted prices month-to-month by a significant amount. Additionally, larger companies carry more overhead and have higher operating costs as compared to smaller outfits.",
+          },
+          {
+            key: "faq6",
+            q: "Will my solar installer apply for grants and loans for me?",
+            a: "The Greener Homes Grant and Loan programs must be applied for independently by the hoeowner. However, Helion solar can assist with providing resources and guidance throught the process, to ensure your applications get accepted the first time.",
+          },
+          
         ].map((item) => (
           <CentralTile key={item.key} style={{padding: containerPadding }}>
             <QnaCard question={item.q} answer={item.a} textStyle={{fontSize: mainFontSize, lineHeight: mainLineHeight}} />

@@ -5,7 +5,7 @@ import SolarPrograms from "./components/Homepage/SolarPrograms";
 import SolarSolutions from "./components/Homepage/SolarSolutions";
 import OurProducts from "./components/Homepage/OurProducts";
 import FAQ from "./components/Homepage/FAQ";
-import RequestQuoteButton from "./components/Homepage/RequestQuoteButton";
+import Testimonials from "./components/Homepage/Testimonials"
 import Footer from "./components/Misc/Footer/Footer";
 import { useWindowSize } from "usehooks-ts";
 import FreeQuoteModal from "./components/Misc/Modals/FreeQuoteModal";
@@ -54,8 +54,10 @@ function App() {
         />
         <Banner1 viewportWidth={width} zoom={totalZoom}/>
         <SolarPrograms viewportWidth={width} zoom={totalZoom}/>
+        <Testimonials viewportWidth={width} zoom={totalZoom}/>
         <SolarSolutions viewportWidth={width} zoom={totalZoom}/>
         <OurProducts zoom={totalZoom}/>
+        
         <FAQ viewportWidth={width} zoom={totalZoom}/>
         {/* <RequestQuoteButton
           viewportWidth={width}

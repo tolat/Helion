@@ -5,7 +5,7 @@ import { selectTSML } from "../../utils";
 
 import styles from "./SolarSolutions.module.css";
 
-import banner2 from "../../images/solarspan4.jpg";
+import banner2 from "../../images/darkbg5.png";
 import banner2_mobile from "../../images/solarspan7.jpg"
 import stringInvImgDesktop from "../../images/strings_ground.jpeg";
 import stringInvImgMobile from "../../images/strings_ground_mobile.jpg"
@@ -23,12 +23,10 @@ const SolarSolutions = (props) => {
   const textAlign = selectTSML(w, "", "", "", "");
   const tileImgHeight = selectTSML(w, "10rem", "20rem", "15rem", "15rem");
   const containerPadding = selectTSML(w, "0")
-  const backgroundAttachment = selectTSML(w, "scroll", "fixed", "fixed", "fixed")
-  const backgroundImage = selectTSML(w, banner2_mobile, banner2, banner2, banner2)
-  const backgroundOpacity = selectTSML(w, "0.7","0.5","0.5","0.5")
+  const backgroundImage = selectTSML(w, banner2, banner2, banner2, banner2)
   const stringInvImg = selectTSML(w,stringInvImgMobile,stringInvImgDesktop,stringInvImgDesktop,stringInvImgDesktop)
   const batteryImg = selectTSML(w, batteryImgMobile, batteryImgDesktop, batteryImgDesktop, batteryImgDesktop)
-  const headerMarginTop = selectTSML(w, "0")
+  const headerMarginTop = selectTSML(w, "0", "3rem", "3rem", "3rem")
 
   const headerTextFontSize = selectTSML(w, "0.8rem", "1.5rem", "1.5rem", "1.5rem")
   const tileTextFontSize = selectTSML(w, "0.8rem")
@@ -39,16 +37,18 @@ const SolarSolutions = (props) => {
   const headerTextLineHeight = selectTSML(w, "unset")
   const headerTilePadding = selectTSML(w, "1rem 1rem 0.4rem 1rem")
   const textTilePadding = selectTSML(w, "0rem 1rem 1rem 1rem")
+  const containerMarginBottom = selectTSML(w, "0rem", "2rem", "5rem", "10rem")
+  const containerMarginTop = selectTSML(w, "unset", "0rem", "-1rem", "-1rem" )
 
   return (
     <div style={{zoom: props.zoom}}>
 
     <BlackFade
       backgroundImage={backgroundImage}
-      backgroundOpacity={backgroundOpacity}
-      backgroundAttachment={backgroundAttachment}>
+      backgroundOpacity={1}
+      backgroundAttachment={"scroll"}>
       <FullWidthSection>
-        <div style={{ maxWidth: "90rem"}}>
+        <div style={{ maxWidth: "90rem",  marginTop: containerMarginTop}}>
           <div
             className={styles.header}
             style={{ color: "white", fontSize: headerFontSize, marginTop: headerMarginTop, padding: headerPadding}}>
@@ -70,7 +70,8 @@ const SolarSolutions = (props) => {
             flexDirection: tileFlexDirection,
             justifyItems: tileJustify,
             maxWidth: "90rem",
-            padding: containerPadding
+            padding: containerPadding,
+            marginBottom: containerMarginBottom,
           }}>
           {[
             {

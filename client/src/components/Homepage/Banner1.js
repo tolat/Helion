@@ -34,13 +34,14 @@ const Banner1 = (props) => {
     "fixed"
   );
   const textMargin = selectTSML(w, "7rem 1rem 0 1rem");
+  const expandButtonMarginBottom = selectTSML(w, "0rem", "-4.7rem", "-4.7rem", "-4.7rem")
 
   return (
     <div style={{ zoom: props.zoom }}>
       <FullWidthSection>
         <BlackFade
           backgroundImage={background}
-          backgroundOpacity="0.75"
+          backgroundOpacity="0.70"
           backgroundAttachment={backgroundAttachment}
         >
           <div
@@ -75,7 +76,7 @@ const Banner1 = (props) => {
                 />
               </div>
             </div>
-            <div className={styles.expandButtonContainer}>
+            <div className={styles.expandButtonContainer} style={{marginBottom: expandButtonMarginBottom}}>
               <ExpandButton
                 style={{
                   marginBottom: expandButtonMargin,

@@ -32,7 +32,7 @@ const Footer = (props) => {
           <FooterTile
             key="ft2"
             style={{ maxWidth: textMaxWidth }}
-            header="About"
+            header="About Us"
           >
             <div style={{ display: "flex", flexDirection: "column", fontSize: mainFontSize }}>
               <div>
