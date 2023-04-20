@@ -7,19 +7,20 @@ const FAQ = (props) => {
   const w = props.viewportWidth;
   const templateCols = selectTSML(w, "100%", "100%", "50% 50%", "50% 50%");
   const mainFontSize = selectTSML(w, "0.8rem")
-  const incentiveFontSize = selectTSML(w, "1.2rem")
   const headerFontSize = selectTSML(w, "1.8rem", "2rem", "2rem", "2rem")
-  const headerMargin = selectTSML(w, "1rem 0 0rem 0")
   const containerPadding = selectTSML(w, "1.4rem 1.4rem 0 1.4rem")
   const mainLineHeight = selectTSML(w, "unset")
-  const marginTop = selectTSML(w, "2rem", "0rem", "0rem", "0rem")
+  const marginTop = selectTSML(w, "2rem", "2rem", "2rem", "2rem")
+  const border= selectTSML(w,"none", "1px solid grey", "1px solid grey", "1px solid grey")
+  const borderRadius = selectTSML(w, "none", "4px", "4px", "4px")
 
   return (
     <div style={{zoom: props.zoom}}>
 
     <CentralSection
       id="FAQsection"
-      style={{ flexDirection: "column" }}>
+      style={{ flexDirection: "column", backgroundColor: "#f6faff", borderRadius: borderRadius, border: border }}
+     >
       <div
         style={{
           width: "100%",
@@ -36,7 +37,6 @@ const FAQ = (props) => {
           gridTemplateColumns: templateCols,
           justifyContent: "center",
           width: "100%",
-          paddingBottom: "3rem",
         }}>
         {[
           {

@@ -12,8 +12,8 @@ const testimonials = [
     source: "G. Kurack",
   },
   {
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-    source: "Zeus",
+    text: "My Off-grid solar array is only 2 panels but it is working great! It's awesome to have power enough for my DC fridge from spring to fall. Helion did a great job with the installation. Looking to expand soon!",
+    source: "Maria",
   },
 ];
 
@@ -85,6 +85,8 @@ const Carousel = (props) => {
       className={styles.testimonialContainer}
       style={{
         padding: testimonialContainerPadding,
+        display: "flex",
+        justifyContent: "center"
       }}
       onDragStart={handleDragStart}
     >
@@ -93,7 +95,8 @@ const Carousel = (props) => {
         style={{
           width: testimonialTextWidth,
           textAlign: testimonialTextAlign,
-          fontSize: fontSize
+          fontSize: fontSize,
+          
         }}
       >{`"${t.text}"`}</div>
       <div className={styles.testimonialSource}>{`- ${t.source}`}</div>

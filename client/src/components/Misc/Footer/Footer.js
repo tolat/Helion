@@ -10,18 +10,22 @@ const Footer = (props) => {
   const textMaxWidth = selectTSML(w, "", "", "35rem", "40rem");
   const marginTop = selectTSML(w, "3rem")
   const mainFontSize = selectTSML(w, "0.8rem")
+  const containermarginTop = selectTSML(w, "0", "5rem", "5rem", "5rem")
   return (
     <div style={{zoom: props.zoom}}>
 
     <FullWidthSection
       style={{
         backgroundColor: "rgb(41,41,41)",
-      }}
+        paddingTop: "4rem",
+        marginTop: containermarginTop,
+              }}
     >
-      <CentralSection>
+      <CentralSection >
         <div
           className={styles.container}
           style={{ flexDirection: flexDirection, marginTop: marginTop }}
+          
         >
           <FooterTile key="ft1" header="Contact">
             <div style={{ display: "flex", flexDirection: "column", fontSize: mainFontSize }}>

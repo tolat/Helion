@@ -22,13 +22,14 @@ const SolarPrograms = (props) => {
   const tile1padding = selectTSML(w,"2rem 0 0 0", "2rem", "2rem", "2rem")
   const tile2padding = selectTSML(w,"1rem")
   const containerPadding = selectTSML(w, "0")
+  const container2Padding = selectTSML(w, "0", "0 2rem 0 0 ", "0 2rem 0 0 ", "0 2rem 0 0 ")
   const imgonlyDisplay = selectTSML(w, "none")
   const tile1MarginBottom = selectTSML(w, "1rem", "4rem", "4rem", "4rem")
   const tile2MarginBottom = selectTSML(w, "2rem", "6rem", "6rem", "6rem")
 
   return (
-    <div style={{ zoom: props.zoom }}>
-      <CentralSection containerStyle={{padding: containerPadding}} style={{ flexDirection: "column" }}>
+    <div style={{ zoom: props.zoom }}  >
+      <CentralSection containerStyle={{padding: containerPadding}} style={{ flexDirection: "column" }} id="solarProgramsSection">
         <div
           className={styles.header}
           style={{ fontSize: headerFontSize, margin: headerMargin }}
@@ -108,7 +109,7 @@ const SolarPrograms = (props) => {
         </div>
       </CentralSection>
       <CentralSection
-        containerStyle={{padding: containerPadding, backgroundColor: "#f9f9f9" }}
+        containerStyle={{padding: container2Padding, backgroundColor: "#f9f9f9" }}
         style={{ flexDirection: "column" }}
       >
         <div
@@ -132,7 +133,7 @@ const SolarPrograms = (props) => {
           />
           <div style={{ width: tileWidth }}>
             <div
-              id="solarProgramsSection"
+             
               style={{
                 display: "flex",
                 flexDirection: "column",
