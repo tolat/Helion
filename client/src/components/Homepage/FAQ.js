@@ -10,16 +10,15 @@ const FAQ = (props) => {
   const headerFontSize = selectTSML(w, "1.8rem", "2rem", "2rem", "2rem")
   const containerPadding = selectTSML(w, "1.4rem 1.4rem 0 1.4rem")
   const mainLineHeight = selectTSML(w, "unset")
-  const marginTop = selectTSML(w, "2rem", "2rem", "2rem", "2rem")
-  const border= selectTSML(w,"none", "1px solid grey", "1px solid grey", "1px solid grey")
-  const borderRadius = selectTSML(w, "none", "4px", "4px", "4px")
+  const marginTop = selectTSML(w, "2rem", "4rem", "2rem", "2rem")
+  const marginTopContainer = selectTSML(w, "0", "4rem", "4rem", "4rem")
 
   return (
-    <div style={{zoom: props.zoom}}>
+    <div style={{zoom: props.zoom, marginTop: marginTopContainer}}>
 
     <CentralSection
       id="FAQsection"
-      style={{ flexDirection: "column", backgroundColor: "#f6faff", borderRadius: borderRadius, border: border }}
+      style={{ flexDirection: "column" }}
      >
       <div
         style={{

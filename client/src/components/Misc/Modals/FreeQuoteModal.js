@@ -26,6 +26,7 @@ const FreeQuoteModal = (props) => {
   const scrollMaskImage = selectTSML(w, "", "none", "none", "none");
   const equipPrefMarginBottom = selectTSML(w, "2rem", "", "", "");
   const buttonFontSize = selectTSML(w, "1.4rem", "", "", "");
+  const formPadding = selectTSML(w, "3rem 1rem 3rem 1rem")
 
   const [spinnerDisplay, setSpinnerDisplay] = useState("none");
   const [iconDisplay, setIconDisplay] = useState("block");
@@ -120,7 +121,7 @@ const FreeQuoteModal = (props) => {
       modalWidth={quoteModalWidth}
       modalHeight={quoteModalHeight}
       modalMaxHeight={quoteModalMaxHeight}>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={handleSubmit} style={{padding: formPadding}}>
         <div
           className={`${styles.nonButtonContainer} noscroll`}
           style={{

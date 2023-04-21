@@ -2,9 +2,7 @@ import CentralSection from "../../components/GeneralUI/CentralSection";
 import styles from "./Testimonials.module.css";
 import AliceCarousel from "react-alice-carousel";
 import { selectTSML } from "../../utils";
-import BlackFade from "../GeneralUI/BlackFade";
 
-import background from "../../images/solarspan4.jpg"
 
 const testimonials = [
   {
@@ -24,15 +22,12 @@ const Testimonials = (props) => {
 
 
   return (
-    /* <div
+     <div
       style={{
-        backgroundColor: "#262b33",
+        backgroundColor: "#1a2026",
       }}
-    > */
-      <BlackFade 
-      backgroundImage={background}
-      backgroundOpacity="0.50"
-      backgroundAttachment={"fixed"}>
+    > 
+      
       <CentralSection
         containerStyle={{
           zoom: props.zoom,
@@ -40,21 +35,9 @@ const Testimonials = (props) => {
         }}
         style={{ display: "flex", flexDirection: "column", paddingBottom: paddingBottom }}
       >
-       {/*  <div
-          className={styles.header}
-          style={{
-            color: "white",
-            fontSize: "2rem",
-            marginTop: "1rem",
-            marginLeft: "8rem",
-          }}
-        >
-          <b>Testimonials</b>{" "}
-        </div> */}
         <Carousel viewportWidth={w}></Carousel>
       </CentralSection>
-      </BlackFade>
-   /*  </div> */
+   </div> 
   );
 };
 

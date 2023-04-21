@@ -26,7 +26,6 @@ const SolarSolutions = (props) => {
   const backgroundImage = selectTSML(w, banner2, banner2, banner2, banner2)
   const stringInvImg = selectTSML(w,stringInvImgMobile,stringInvImgDesktop,stringInvImgDesktop,stringInvImgDesktop)
   const batteryImg = selectTSML(w, batteryImgMobile, batteryImgDesktop, batteryImgDesktop, batteryImgDesktop)
-  const headerMarginTop = selectTSML(w, "0", "3rem", "3rem", "3rem")
 
   const headerTextFontSize = selectTSML(w, "0.8rem", "1.5rem", "1.5rem", "1.5rem")
   const tileTextFontSize = selectTSML(w, "0.8rem")
@@ -51,7 +50,7 @@ const SolarSolutions = (props) => {
         <div style={{ maxWidth: "90rem",  marginTop: containerMarginTop}}>
           <div
             className={styles.header}
-            style={{ color: "white", fontSize: headerFontSize, marginTop: headerMarginTop, padding: headerPadding}}>
+            style={{ color: "white", fontSize: headerFontSize, padding: headerPadding}}>
             Solar <b>Solutions</b>{" "}
           </div>
           <div

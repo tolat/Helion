@@ -15,6 +15,7 @@ import ContactModal from "./components/Misc/Modals/ContactModal";
 import Flash from "./components/Misc/Flash/Flash";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavDrawer from "./components/Misc/Nav/NavDrawer";
+import RequestQuoteButton from "./components/Homepage/RequestQuoteButton"
 
 function App() {
   const { width } = useWindowSize();
@@ -53,16 +54,15 @@ function App() {
           zoom={totalZoom}
         />
         <Banner1 viewportWidth={width} zoom={totalZoom}/>
-        <SolarPrograms viewportWidth={width} zoom={totalZoom}/>
         <Testimonials viewportWidth={width} zoom={totalZoom}/>
         <SolarSolutions viewportWidth={width} zoom={totalZoom}/>
         <OurProducts zoom={totalZoom}/>
-        
+        <SolarPrograms viewportWidth={width} zoom={totalZoom}/>
         <FAQ viewportWidth={width} zoom={totalZoom}/>
-        {/* <RequestQuoteButton
+        <RequestQuoteButton
           viewportWidth={width}
           setModalVis={setQuoteModalVis}
-        /> */}
+        /> 
         <Footer viewportWidth={width} zoom={totalZoom}/>
       </div>
     </div>

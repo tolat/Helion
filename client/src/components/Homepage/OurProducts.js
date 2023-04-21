@@ -7,7 +7,7 @@ const OurProducts = (props) => {
   const { width } = useWindowSize();
   const headerFontSize = selectTSML(width, "1.8rem", "2.2rem", "2.5rem", "2.5rem");
   const carouselMargin = selectTSML(width,"3rem 1.4rem 3rem 1.4rem","4rem 2rem 4rem 2rem","4rem 0rem 5rem 0rem","4rem 0rem 5rem 0rem" )
-  const headerDisplay = selectTSML(width, "unset", "none", "none", "none")
+  const headerDisplay = selectTSML(width, "none", "none", "none", "none")
   const marginTop = selectTSML(width, "unset", "-4rem", "-4rem", "-4rem")
   
   return (

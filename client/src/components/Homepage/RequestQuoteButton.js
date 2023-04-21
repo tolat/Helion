@@ -12,7 +12,8 @@ const RequestQuoteButton = (props) => {
     handleToggleModal(props.setModalVis);
   };
 
-  const buttonWidth = selectTSML(w, "100%", "100%", "80%", "80%");
+  const buttonWidth = selectTSML(w, "80%", "80%", "80%", "80%");
+  const margin = selectTSML(w, "2rem 0 5rem 0", "4rem 0 5rem 0", "4rem 0 5rem 0", "4rem 0 5rem 0")
 
   return (
     <CentralSection>
@@ -22,19 +23,20 @@ const RequestQuoteButton = (props) => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          margin: "2rem 0 5rem 0",
+          margin: margin,
           zoom: zoom,
         }}>
         <GeneralButton
           style={{
-            backgroundColor: "rgb(64,136,202)",
+            backgroundColor: "#57ae57",
             color: "white",
             fontSize: "1.8rem",
+
             width: buttonWidth,
             height: "4rem",
           }}
           onClick={clickHandler}>
-          Request Free Solar Quote!
+          Get your&nbsp;<b>Free Solar Quote!</b>
         </GeneralButton>
       </div>
     </CentralSection>

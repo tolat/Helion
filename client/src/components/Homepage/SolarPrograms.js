@@ -16,7 +16,8 @@ const SolarPrograms = (props) => {
   const mainFontSize = selectTSML(w, "0.8rem", "1.1rem", "1.1rem", "1.1rem");
   const incentiveFontSize = selectTSML(w, "1.2rem");
   const headerFontSize = selectTSML(w, "1.8rem");
-  const headerMargin = selectTSML(w, "2rem 0 0 1.5rem", "4rem 0 0 3rem", "4rem 0 0 3rem", "4rem 0 0 3rem");
+  const headerMargin1 = selectTSML(w, "2rem 0 0 1.5rem", "4rem 0 0 3rem", "4rem 0 0 3rem", "4rem 0 0 3rem");
+  const headerMargin2 = selectTSML(w, "2rem 0 0 1.5rem", "4rem 0 2rem 3rem", "4rem 0 2rem 3rem", "4rem 0 2rem 3rem");
   const containerFlexDirection = selectTSML(w, "column", "row", "row" , "row")
   const tileWidth = selectTSML(w, "100%", "50%", "50%", "50%")
   const tile1padding = selectTSML(w,"2rem 0 0 0", "2rem", "2rem", "2rem")
@@ -32,7 +33,7 @@ const SolarPrograms = (props) => {
       <CentralSection containerStyle={{padding: containerPadding}} style={{ flexDirection: "column" }} id="solarProgramsSection">
         <div
           className={styles.header}
-          style={{ fontSize: headerFontSize, margin: headerMargin }}
+          style={{ fontSize: headerFontSize, margin: headerMargin1 }}
         >
           BC <b>Net Metering</b>
         </div>
@@ -114,7 +115,7 @@ const SolarPrograms = (props) => {
       >
         <div
           className={styles.header}
-          style={{ fontSize: headerFontSize, margin: headerMargin }}
+          style={{ fontSize: headerFontSize, margin: headerMargin2 }}
         >
           Solar <b>Incentives</b>
         </div>

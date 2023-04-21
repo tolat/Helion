@@ -22,6 +22,8 @@ const ContactModal = (props) => {
   const quoteModalHeight = selectTSML(w, "100%", "", "", "");
   const quoteModalMaxHeight = selectTSML(w, "", "80%", "80%", "80%");
   const buttonFontSize = selectTSML(w, "1.4rem", "", "", "");
+  const formPadding = selectTSML(w, "3rem 1rem 3rem 1rem")
+
 
   const [spinnerDisplay, setSpinnerDisplay] = useState("none");
   const [iconDisplay, setIconDisplay] = useState("block");
@@ -103,7 +105,7 @@ const ContactModal = (props) => {
       modalHeight={quoteModalHeight}
       modalMaxHeight={quoteModalMaxHeight}
       side>
-      <form className={styles.form} style={props.style} onSubmit={handleSubmit}>
+      <form className={styles.form} style={{padding: formPadding}} onSubmit={handleSubmit}>
         <div
           className={`${styles.nonButtonContainer} noscroll`}
           style={{

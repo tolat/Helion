@@ -16,7 +16,7 @@ const Footer = (props) => {
 
     <FullWidthSection
       style={{
-        backgroundColor: "rgb(41,41,41)",
+        backgroundColor: "#1d222a",
         paddingTop: "4rem",
         marginTop: containermarginTop,
               }}
