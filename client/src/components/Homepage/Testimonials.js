@@ -18,7 +18,7 @@ const testimonials = [
 const Testimonials = (props) => {
   const w = props.viewportWidth;
   const padding = selectTSML(w, "0rem", "2rem", "2rem", "2rem");
-  const paddingBottom=selectTSML(w, "3rem")
+  const paddingBottom=selectTSML(w, "0")
 
 
   return (
@@ -45,13 +45,13 @@ const Carousel = (props) => {
   const w = props.viewportWidth;
   const testimonialContainerPadding = selectTSML(
     w,
-    "0",
+    "1rem",
     "2rem",
     "2rem",
     "2rem"
   );
 
-  const testimonialTextWidth = selectTSML(w, "85%", "70%", "70%", "70%");
+  const testimonialTextWidth = selectTSML(w, "100%", "100%", "100%", "100%");
   const testimonialTextAlign = selectTSML(
     w,
     "left",
@@ -60,6 +60,9 @@ const Carousel = (props) => {
     "justify"
   );
   const fontSize = selectTSML(w, "1rem")
+  const containerWidth = selectTSML(w, "85%")
+  const containerMarginLeft = selectTSML(w, "7.5%")
+  const containerMarginTop = selectTSML(w, "2rem")
 
 
   const handleDragStart = (e) => e.preventDefault();
@@ -69,7 +72,11 @@ const Carousel = (props) => {
       style={{
         padding: testimonialContainerPadding,
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        width: containerWidth,
+        marginTop: containerMarginTop,
+        marginLeft: containerMarginLeft
+
       }}
       onDragStart={handleDragStart}
     >
