@@ -1,15 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.4b98d1b4.css",
-    "main.js": "/static/js/main.9357c814.js",
+    "main.js": "/static/js/main.a736ca7b.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
-    "static/media/solarspan1_mobile.jpg": "/static/media/solarspan1_mobile.f7b4331b7969b29288fb.jpg",
     "static/media/solarspan10.jpg": "/static/media/solarspan10.a76c1d85f30bbd06c09b.jpg",
     "static/media/solar_background3.png": "/static/media/solar_background3.695672eeb1531742ff74.png",
     "static/media/blackpanels1.jpeg": "/static/media/blackpanels1.0e017dc2466f30fd6b33.jpeg",
     "static/media/netmetering_graphic.png": "/static/media/netmetering_graphic.ab4d14b9b1de9884b21d.png",
     "static/media/Helion_logo_nobg_light.png": "/static/media/Helion_logo_nobg_light.bf0df3b22cdff577e117.png",
-    "static/media/netmetering_graphic_square.png": "/static/media/netmetering_graphic_square.c65a7ad92ca1ce3929cc.png",
+    "static/media/netmetering_graphic_square.png": "/static/media/netmetering_graphic_square.c95c06d3d4105e19890a.png",
     "static/media/netmetering_graphic_vertical.jpg": "/static/media/netmetering_graphic_vertical.42b742ccd01cb708ce9f.jpg",
     "static/media/greener_homes_graphic.png": "/static/media/greener_homes_graphic.936778e9ada5ec5512e3.png",
     "static/media/nm_graphic_imageonly.png": "/static/media/nm_graphic_imageonly.f8b5a074f73ad79cfabd.png",
@@ -30,11 +29,11 @@
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
     "main.4b98d1b4.css.map": "/static/css/main.4b98d1b4.css.map",
-    "main.9357c814.js.map": "/static/js/main.9357c814.js.map",
+    "main.a736ca7b.js.map": "/static/js/main.a736ca7b.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4b98d1b4.css",
-    "static/js/main.9357c814.js"
+    "static/js/main.a736ca7b.js"
   ]
 }
