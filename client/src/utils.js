@@ -113,7 +113,7 @@ export const toggleNavDrawer = () => {
   if (navDrawer.style.right != "0px") {
     navDrawer.style.right = "0px";
     document.body.style.overflowY = "hidden";
-    document.body.style.height = "vh"
+    document.body.style.height = "100vh"
     //navDrawerBlackout.style.display = "block";
   } else {
     navDrawer.style.right = "-30rem";
