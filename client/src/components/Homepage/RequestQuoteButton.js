@@ -6,14 +6,13 @@ import { selectTSML } from "../../utils";
 const RequestQuoteButton = (props) => {
   const w = props.viewportWidth;
 
-  const zoom = selectTSML(w, "0.7", "0.8", "", "");
-
   const clickHandler = () => {
     handleToggleModal(props.setModalVis);
   };
 
   const buttonWidth = selectTSML(w, "80%", "80%", "80%", "80%");
   const margin = selectTSML(w, "2rem 0 5rem 0", "4rem 0 5rem 0", "4rem 0 5rem 0", "4rem 0 5rem 0")
+  const fontSize = selectTSML(w, "1rem", "1.5rem", "1.8rem", "1.8rem")
 
   return (
     <CentralSection>
@@ -24,13 +23,12 @@ const RequestQuoteButton = (props) => {
           flexDirection: "row",
           justifyContent: "center",
           margin: margin,
-          zoom: zoom,
         }}>
         <GeneralButton
           style={{
             backgroundColor: "#57ae57",
             color: "white",
-            fontSize: "1.8rem",
+            fontSize: fontSize,
 
             width: buttonWidth,
             height: "4rem",
