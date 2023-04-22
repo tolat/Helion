@@ -24,9 +24,9 @@ const FAQ = (props) => {
         style={{
           width: "100%",
           fontSize: headerFontSize,
-          textAlign: "center",
           fontWeight: "bold",
-          marginTop: marginTop
+          marginTop: marginTop,
+          marginLeft: "2rem"
         }}>
         FAQ
       </div>

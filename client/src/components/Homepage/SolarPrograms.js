@@ -27,6 +27,8 @@ const SolarPrograms = (props) => {
   const imgonlyDisplay = selectTSML(w, "none")
   const tile1MarginBottom = selectTSML(w, "1rem", "4rem", "4rem", "4rem")
   const tile2MarginBottom = selectTSML(w, "2rem", "6rem", "6rem", "6rem")
+  const nmImgPadding = selectTSML(w, "0", "1rem", "1rem", "1rem")
+  const incentiveTextPadding = selectTSML(w, "0", "1rem", "1rem", "1rem")
 
   return (
     <div style={{ zoom: props.zoom }}  >
@@ -48,6 +50,7 @@ const SolarPrograms = (props) => {
           <img
             style={{
               width: tileWidth,
+              padding: nmImgPadding
             }}
             src={nm_graphic}
             alt="Net Metering Graphic"
@@ -57,7 +60,7 @@ const SolarPrograms = (props) => {
               padding: "1rem",
               width: tileWidth,
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: "center",
               flexDirection: "column",
               alignItems: "center",
             }}
@@ -78,12 +81,8 @@ const SolarPrograms = (props) => {
                 end. If you produced more energy from solar than you used, the
                 consumption portion of your bill will be zero. Any extra credits
                 will carry over to the next billing cycle.
-                <br /> <br />
-                Accumulated credits carry over month-to-month until you hit your
-                anniversary date (typically March), when any unused credits are
-                paid out at market price. When designing large solar systems, we
-                aim for a "100% Offset" - making sure energy production is
-                maximized while also not ending the year with unused credits.
+                
+                
               </div>
             </div>
             <img
@@ -132,9 +131,8 @@ const SolarPrograms = (props) => {
             src={gh_graphic}
             alt="greener homes path graphic"
           />
-          <div style={{ width: tileWidth }}>
+          <div style={{ width: tileWidth, padding: incentiveTextPadding }}>
             <div
-             
               style={{
                 display: "flex",
                 flexDirection: "column",

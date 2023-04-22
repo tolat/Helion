@@ -5,12 +5,12 @@ import { selectTSML } from "../../utils";
 import ExpandButton from "../GeneralUI/ExpandButton";
 
 import bg_mobile from "../../images/solarspan1_mobile.jpg";
-import bg_medium from "../../images/solarspan1_medium.jpg";
+import bg_medium from "../../images/solarspan10.jpg";
 import nabcepSeal from "../../images/pv_assoc_seal.png";
 
 const Banner1 = (props) => {
   const w = props.viewportWidth;
-  const background = selectTSML(w, bg_mobile, bg_mobile, bg_medium, bg_medium);
+  const background = selectTSML(w, bg_medium, bg_mobile, bg_medium, bg_medium);
   const minHeight = selectTSML(w, "100vh", "28rem", "28rem", "46rem");
   const fontSize = selectTSML(w, "1.5rem", "2rem", "2.2rem", "");
   const nebcepJustify = selectTSML(w, "center", "end", "", "");
@@ -59,7 +59,7 @@ const Banner1 = (props) => {
               >
                 Residential solar installation<br></br>
                 Pre-wiring and consultation<br></br>
-                Off-grid and grid-tied projects<br></br>
+                Off-grid and grid-tied systems<br></br>
               </div>
               <div
                 className={styles.nabcepContainer}
