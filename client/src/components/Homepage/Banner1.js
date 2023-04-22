@@ -15,12 +15,12 @@ const Banner1 = (props) => {
   const nebcepJustify = selectTSML(w, "center", "end", "", "");
   const expandButtonMargin = selectTSML(w, "4rem", "", "", "");
   const textAlign = selectTSML(w, "left");
-  const nabcepDisplay = selectTSML(w, "");
+  const nabcepDisplay = selectTSML(w, "flex");
   const bannerAlign = selectTSML(w, "center");
   const imgHeight = selectTSML(w, "8rem", "8rem", "9rem", "");
   const imgMargin = selectTSML(
     w,
-    "",
+    "2rem 3rem 0 3rem",
     "1rem 3rem 0 3rem",
     "1rem 3rem 0 3rem",
     ""
@@ -40,7 +40,7 @@ const Banner1 = (props) => {
     "-4.7rem",
     "-4.7rem"
   );
-  const phoneNumberFontSize = selectTSML(w, "1rem", "2rem", "2.4rem", "2.4rem");
+  const phoneNumberFontSize = selectTSML(w, "1.3rem", "2rem", "2.4rem", "2.4rem");
   const phoneNumberMargin = selectTSML(
     w,
     "1rem 0 0 1rem",
