@@ -22,7 +22,6 @@ const FAQ = (props) => {
      >
       <div
         style={{
-          width: "100%",
           fontSize: headerFontSize,
           fontWeight: "bold",
           marginTop: marginTop,

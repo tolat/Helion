@@ -114,11 +114,15 @@ export const toggleNavDrawer = () => {
     navDrawer.style.right = "0px";
     document.body.style.overflowY = "hidden";
     document.body.style.height = "100vh"
+    document.body.style.touchAction = "none";
+      document.body.style.webkitOverflowScrolling = "none";
     //navDrawerBlackout.style.display = "block";
   } else {
     navDrawer.style.right = "-30rem";
     document.body.style.overflowY = "scroll";
-    document.body.style.height = "unset"
+    document.body.style.height = ""
+    document.body.style.touchAction = "";
+      document.body.style.webkitOverflowScrolling = "";
     //navDrawerBlackout.style.display = "none";
   }
 };
