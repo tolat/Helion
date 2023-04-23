@@ -30,7 +30,7 @@ const SolarSolutions = (props) => {
   const headerTextFontSize = selectTSML(w, "0.8rem", "1.5rem", "1.5rem", "1.5rem")
   const tileTextFontSize = selectTSML(w, "0.8rem")
   const headerFontSize = selectTSML(w, "1.8rem", "2.3rem","2.5rem","2.5rem")
-  const headerPadding = selectTSML(w, "2rem 0 1rem 1.4rem","2rem 0 1rem 2rem","4rem 0 0rem 3rem","4rem 0 0rem 3rem")
+  const headerPadding = selectTSML(w, "2rem 0 1rem 1.4rem","1rem 0 1rem 2rem","1rem 0 0rem 3rem","1rem 0 rem 3rem")
   const blurbPadding = selectTSML( w, "0rem 0 1rem 1.4rem")
   const tileHeaderFontSize = selectTSML(w, "1.2rem")
   const headerTextLineHeight = selectTSML(w, "unset")
