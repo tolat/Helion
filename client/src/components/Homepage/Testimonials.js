@@ -10,8 +10,8 @@ const testimonials = [
     source: "G. Kurack",
   },
   {
-    text: "My Off-grid solar array is only 2 panels but it is working great! It's awesome to have power enough for my DC fridge from spring to fall. Helion did a great job with the installation. Looking to expand soon!",
-    source: "Maria",
+    text: "Our off-grid install was done quickly and efficiently and Helion Solar was able to address various issues and surprises that arose due to the remote location and/or the age of the cabin and complete the installation without delays.  We have been very happy with the system and it has provided us much needed electricity that has made our cabin experience much more enjoyable. I warmly recommend Helion Solar.",
+    source: "Marja B.",
   },
 ];
 
@@ -101,7 +101,7 @@ const Carousel = (props) => {
       disableButtonsControls={true}
       disableDotsControls={true}
       infinite={true}
-      animationDuration={3000}
+      animationDuration={2000}
       autoPlayInterval={10000}
       selectTSML={{
         0: { items: 1 },

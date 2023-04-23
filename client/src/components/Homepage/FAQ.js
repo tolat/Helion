@@ -65,7 +65,7 @@ const FAQ = (props) => {
           {
             key: "faq6",
             q: "Will my solar installer apply for grants and loans for me?",
-            a: "The Greener Homes Grant and Loan programs must be applied for independently by the hoeowner. However, Helion solar can assist with providing resources and guidance throught the process, to ensure your applications get accepted the first time.",
+            a: "The Greener Homes Grant and Loan programs must be applied for independently by hoeowners. However, Helion Solar can assist with providing resources and guidance throughout the process to ensure your applications get accepted the first time.",
           },
           
         ].map((item) => (
