@@ -59,7 +59,7 @@ const FAQ = (props) => {
           },
           {
             key: "faq5",
-            q: "Why do solar quotes vary so much from compan to company?",
+            q: "Why do solar quotes vary so much from company to company?",
             a: "Depending on the supplier, companies may be paying more or less for equipment. Market and supply chain volatility can also affect equipment prices, which can even change quoted prices month-to-month by a significant amount. Additionally, larger companies carry more overhead and have higher operating costs as compared to smaller outfits.",
           },
           {

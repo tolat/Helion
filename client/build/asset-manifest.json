@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0b88efe7.css",
-    "main.js": "/static/js/main.647fe100.js",
+    "main.js": "/static/js/main.e6f78613.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
     "static/media/solarspan10.jpg": "/static/media/solarspan10.a76c1d85f30bbd06c09b.jpg",
     "static/media/solar_background3.png": "/static/media/solar_background3.695672eeb1531742ff74.png",
@@ -29,11 +29,11 @@
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
     "main.0b88efe7.css.map": "/static/css/main.0b88efe7.css.map",
-    "main.647fe100.js.map": "/static/js/main.647fe100.js.map",
+    "main.e6f78613.js.map": "/static/js/main.e6f78613.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b88efe7.css",
-    "static/js/main.647fe100.js"
+    "static/js/main.e6f78613.js"
   ]
 }
