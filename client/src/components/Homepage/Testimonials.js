@@ -62,7 +62,7 @@ const Carousel = (props) => {
   const fontSize = selectTSML(w, "1rem")
   const containerWidth = selectTSML(w, "85%")
   const containerMarginLeft = selectTSML(w, "7.5%")
-  const containerMarginTop = selectTSML(w, "2rem")
+  const containerMarginTop = selectTSML(w, "2rem", "3rem", "4rem", "4rem")
 
 
   const handleDragStart = (e) => e.preventDefault();

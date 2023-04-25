@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b88efe7.css",
-    "main.js": "/static/js/main.4e499bbf.js",
+    "main.css": "/static/css/main.0e6c256b.css",
+    "main.js": "/static/js/main.476ba8df.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
     "static/media/solarspan10.jpg": "/static/media/solarspan10.a76c1d85f30bbd06c09b.jpg",
     "static/media/solar_background3.png": "/static/media/solar_background3.695672eeb1531742ff74.png",
@@ -15,7 +15,7 @@
     "static/media/GH-journey-map.png": "/static/media/GH-journey-map.d71715c2c6be99113a19.png",
     "static/media/darkbg5.png": "/static/media/darkbg5.41d9b279dae862db05bc.png",
     "static/media/solarspan7.jpg": "/static/media/solarspan7.5756ffc19b8421917764.jpg",
-    "static/media/pv_assoc_seal.png": "/static/media/pv_assoc_seal.35338c93bff7f6636822.png",
+    "static/media/pv_assoc_seal.png": "/static/media/pv_assoc_seal.72cf4b97c0a14fdae8be.png",
     "static/media/microinverter_roof.jpeg": "/static/media/microinverter_roof.79d5f122f4eca0555eed.jpeg",
     "static/media/schneider_logo.png": "/static/media/schneider_logo.f5f65b76bd13bf13d815.png",
     "static/media/strings_ground.jpeg": "/static/media/strings_ground.6f86ee8771c0a674ea5f.jpeg",
@@ -28,12 +28,12 @@
     "static/media/solaredge_logo.png": "/static/media/solaredge_logo.6ee6225f517fe893f807.png",
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
-    "main.0b88efe7.css.map": "/static/css/main.0b88efe7.css.map",
-    "main.4e499bbf.js.map": "/static/js/main.4e499bbf.js.map",
+    "main.0e6c256b.css.map": "/static/css/main.0e6c256b.css.map",
+    "main.476ba8df.js.map": "/static/js/main.476ba8df.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b88efe7.css",
-    "static/js/main.4e499bbf.js"
+    "static/css/main.0e6c256b.css",
+    "static/js/main.476ba8df.js"
   ]
 }

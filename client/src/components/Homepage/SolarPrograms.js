@@ -12,7 +12,7 @@ import nm_imgonly from "../../images/nm_graphic_imageonly.png";
 const SolarPrograms = (props) => {
   const w = props.viewportWidth;
   const nm_graphic = selectTSML(w, nm_ver, nm_wide, nm_wide, nm_wide);
-  const gh_graphic = selectTSML(w, gh_hor, gh_wide, gh_hor, gh_hor);
+  const gh_graphic = selectTSML(w, gh_hor, gh_hor, gh_hor, gh_hor);
   const mainFontSize = selectTSML(w, "0.8rem", "1.1rem", "1.1rem", "1.1rem");
   const incentiveFontSize = selectTSML(w, "1.2rem");
   const headerFontSize = selectTSML(w, "1.8rem");
