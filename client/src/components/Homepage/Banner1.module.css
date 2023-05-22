@@ -12,6 +12,7 @@
 .container {
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
+  font-family: "Raleway";
   text-align: right;
   z-index: 1;
   display: flex;

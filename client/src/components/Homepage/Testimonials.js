@@ -52,13 +52,6 @@ const Carousel = (props) => {
   );
 
   const testimonialTextWidth = selectTSML(w, "100%", "100%", "100%", "100%");
-  const testimonialTextAlign = selectTSML(
-    w,
-    "left",
-    "justify",
-    "justify",
-    "justify"
-  );
   const fontSize = selectTSML(w, "1rem")
   const containerWidth = selectTSML(w, "85%")
   const containerMarginLeft = selectTSML(w, "7.5%")
@@ -84,7 +77,6 @@ const Carousel = (props) => {
         className={styles.testimonialText}
         style={{
           width: testimonialTextWidth,
-          textAlign: testimonialTextAlign,
           fontSize: fontSize,
           
         }}

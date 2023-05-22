@@ -29,9 +29,9 @@ const RequestQuoteButton = (props) => {
             backgroundColor: "#57ae57",
             color: "white",
             fontSize: fontSize,
-
             width: buttonWidth,
             height: "4rem",
+            fontFamily: "Arvo"
           }}
           onClick={clickHandler}>
           Get your&nbsp;<b>Free Solar Quote!</b>

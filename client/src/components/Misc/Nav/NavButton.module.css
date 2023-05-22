@@ -9,6 +9,7 @@
   transition: opacity 0.1s ease-in;
   color: white;
   box-sizing: border-box;
+  font-family: 'Open Sans';
 }
 
 .navButton:hover {

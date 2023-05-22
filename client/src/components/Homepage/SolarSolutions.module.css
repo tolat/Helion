@@ -3,12 +3,14 @@
   font-size: 2rem;
   padding: 3rem;
   box-sizing: border-box;
+  font-family: 'Arvo';
 }
 
 .text {
   width: 100%;
   padding: 3rem;
   box-sizing: border-box;
+  font-family: 'Raleway';
 }
 
 .grid {
@@ -24,4 +26,5 @@
   align-items: center;
   grid-template-columns: 50% 50%;
   padding: 2rem;
+  font-family: 'Raleway';
 }

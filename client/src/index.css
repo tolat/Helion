@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Arvo';
+  src: url('./fonts/Arvo/Arvo-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway/Raleway-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

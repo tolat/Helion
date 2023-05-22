@@ -25,7 +25,8 @@ const FAQ = (props) => {
           fontSize: headerFontSize,
           fontWeight: "bold",
           marginTop: marginTop,
-          marginLeft: "2rem"
+          marginLeft: "2rem",
+          fontFamily: "Arvo"
         }}>
         FAQ
       </div>

@@ -80,6 +80,8 @@ const Banner1 = (props) => {
                   fontSize: phoneNumberFontSize,
                   margin: phoneNumberMargin,
                   textAlign: phoneNumberTextAlign,
+               fontFamily: "Arvo",
+               fontWeight: "bold"
                 }}
               >
                 604.723.5351

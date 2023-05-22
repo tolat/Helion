@@ -96,7 +96,8 @@ const SolarPrograms = (props) => {
                 fontSize: mainFontSize,
                 padding: containerPadding,
                 marginBottom: "1rem",
-                marginTop: "1rem"
+                marginTop: "1rem",
+                fontFamily: "Raleway"
               }}
             >
               Click{" "}
@@ -172,7 +173,7 @@ const SolarPrograms = (props) => {
               </div>
               <div style={{ display: "flex" }}>
                 <div
-                  style={{ fontSize: mainFontSize, padding: containerPadding }}
+                  style={{ fontSize: mainFontSize, padding: containerPadding, fontFamily: "Raleway" }}
                 >
                   Click{" "}
                   <a href="https://www.nrcan.gc.ca/energy-efficiency/homes/canada-greener-homes-grant/23441">

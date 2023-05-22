@@ -9,14 +9,14 @@
   margin-top: 1rem;
   justify-content: center;
   margin-left: 15%;
-background-color: #323946 ;
+  /* background-color: #323946; */
   border-radius: 4px;
- }
+  font-family: "Open Sans";
+}
 
 .testimonialText {
   color: white;
   font-size: 1.4rem;
-  text-align: justify;
   width: 100%;
   margin-bottom: 1rem;
 }
