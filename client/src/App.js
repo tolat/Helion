@@ -10,7 +10,7 @@ import Footer from "./components/Misc/Footer/Footer";
 import { useWindowSize } from "usehooks-ts";
 import FreeQuoteModal from "./components/Misc/Modals/FreeQuoteModal";
 import { useState } from "react";
-import { selectTSML } from "./utils";
+import { selectTSML, handleToggleModal } from "./utils";
 import ContactModal from "./components/Misc/Modals/ContactModal";
 import Flash from "./components/Misc/Flash/Flash";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -27,8 +27,15 @@ function App() {
 
   const totalZoom = selectTSML(width, "1", "0.75", "0.80", "1")
 
+  const onLoad = () =>{
+    // eslint-disable-next-line
+    if(window.location.href.includes("quote") && quoteModalVis.v == "hidden"){
+      handleToggleModal(setQuoteModalVis)
+    } 
+  }
+
   return (
-    <div className={`${styles.AppContainer} noscroll`}>
+    <div className={`${styles.AppContainer} noscroll`} onLoad={onLoad}>
       <Flash id="appFlash" />
       <FreeQuoteModal
         viewportWidth={width}
