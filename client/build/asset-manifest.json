@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.05153c28.css",
-    "main.js": "/static/js/main.5f073d63.js",
+    "main.js": "/static/js/main.e08c5029.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
+    "static/media/parminder.jpg": "/static/media/parminder.badd66732fb6e88ee133.jpg",
     "static/media/solarspan10.jpg": "/static/media/solarspan10.4ae0f8ad179d05709c3e.jpg",
     "static/media/solar_background3.png": "/static/media/solar_background3.695672eeb1531742ff74.png",
     "static/media/blackpanels1.jpeg": "/static/media/blackpanels1.0e017dc2466f30fd6b33.jpeg",
@@ -32,11 +33,11 @@
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
     "main.05153c28.css.map": "/static/css/main.05153c28.css.map",
-    "main.5f073d63.js.map": "/static/js/main.5f073d63.js.map",
+    "main.e08c5029.js.map": "/static/js/main.e08c5029.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05153c28.css",
-    "static/js/main.5f073d63.js"
+    "static/js/main.e08c5029.js"
   ]
 }
