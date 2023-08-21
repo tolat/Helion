@@ -18,3 +18,11 @@
     transparent 100%
   );
 }
+
+.submitButtonContainer{
+  display: flex;
+  background-color: #6ca0bd;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  color: white;
+  border-radius: 1px;
+}

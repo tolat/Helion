@@ -1,5 +1,5 @@
 .testimonialContainer {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,6 @@
   background-color: transparent;
   margin-top: 0rem;
   justify-content: center;
-  margin-left: 15%;
   background-color: #1a2026;
   color: rgb(255, 255, 255);
   font-family: "Open Sans";

@@ -17,7 +17,7 @@ const testimonials = [
 
 const Testimonials = (props) => {
   const w = props.viewportWidth;
-  const padding = selectTSML(w, "0rem", "2rem", "2rem", "2rem");
+  const padding = selectTSML(w, "0rem", "0rem", "0rem", "0rem");
   const paddingBottom=selectTSML(w, "0")
  
 
@@ -29,9 +29,15 @@ const Testimonials = (props) => {
       }}
     > 
       
-      
+      <CentralSection
+        containerStyle={{
+          zoom: props.zoom,
+          padding: padding,
+        }}
+        style={{ display: "flex", flexDirection: "column", paddingBottom: paddingBottom }}
+      >
         <Carousel viewportWidth={w}></Carousel>
-   {/*    </CentralSection> */}
+      </CentralSection>
    </div> 
   );
 };
@@ -48,8 +54,8 @@ const Carousel = (props) => {
 
   const testimonialTextWidth = selectTSML(w, "100%", "100%", "100%", "100%");
   const fontSize = selectTSML(w, "1rem")
-  const containerWidth = selectTSML(w, "85%")
-  const containerMarginLeft = selectTSML(w, "7.5%")
+  const containerWidth = selectTSML(w, "100%")
+  const containerMarginLeft = selectTSML(w, "0%")
   const containerMarginTop = selectTSML(w, "2rem", "3rem", "4rem", "4rem")
   const carouselDots = selectTSML(w, false, true, true, true)
 

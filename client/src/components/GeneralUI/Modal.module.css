@@ -83,7 +83,8 @@
 }
 
 .sectionContainer {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .sectionInputsContainer {
@@ -92,7 +93,7 @@
 
 .inputIcon {
   height: 1.9rem;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .formContainer {

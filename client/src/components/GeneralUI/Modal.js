@@ -26,8 +26,8 @@ const Modal = (props) => {
           zoom: modalZoom,
           height: props.modalHeight,
           maxHeight: props.modalMaxHeight,
-          backgroundImage: `url(${background}`,
-          backgroundSize: "cover",
+          /* backgroundImage: `url(${background}`,
+          backgroundSize: "cover", */
         }}>
         <div className={styles.sidePanel}>{props.sidePanel}</div>
         <div className={styles.mainPanel}>

@@ -2,31 +2,40 @@ import Modal from "../../GeneralUI/Modal";
 import styles from "./FreeQuoteModal.module.css";
 import GeneralInput from "../../GeneralUI/GeneralInput";
 import GeneralButton from "../../GeneralUI/GeneralButton";
-import { selectTSML, showFlash, closeFlash, sendMessage, isMobile } from "../../../utils";
+import {
+  selectTSML,
+  showFlash,
+  closeFlash,
+  sendMessage,
+  isMobile,
+} from "../../../utils";
 import modalStyles from "../../GeneralUI/Modal.module.css";
 import Spinner from "react-bootstrap/Spinner";
 
-import energy_icon from "../../../images/energy_icon.png";
 import roof_icon from "../../../images/roof_icon.png";
 import at_icon from "../../../images/at_icon.png";
-import solar_icon from "../../../images/solar_icon.png";
 import sendmail_icon from "../../../images/sendmail_icon.png";
 import { useState, useRef } from "react";
 import { useWindowSize } from "usehooks-ts";
 
 const FreeQuoteModal = (props) => {
   const w = props.viewportWidth;
-  const col = "column";
   const lowerSectionFlexDirection = selectTSML(w, "column", "", "", "");
-  const lowerSectionInputsFlexDirection = selectTSML(w, col, col, col, col);
+  const lowerSectionInputsFlexDirection = selectTSML(
+    w,
+    "column",
+    "row",
+    "row",
+    "row"
+  );
   const upperFlexDirection = selectTSML(w, "column", "row", "row", "row");
   const quoteModalWidth = selectTSML(w, "100%");
   const quoteModalHeight = selectTSML(w, "100%");
   const quoteModalMaxHeight = selectTSML(w, "", "80%", "80%", "80%");
   const scrollMaskImage = selectTSML(w, "", "none", "none", "none");
-  const equipPrefMarginBottom = selectTSML(w, "2rem", "", "", "");
   const buttonFontSize = selectTSML(w, "1.4rem", "", "", "");
-  const formPadding = selectTSML(w, "3rem 1rem 3rem 1rem")
+  const formPadding = selectTSML(w, "3rem 1rem 3rem 1rem");
+  const inputLabelMaxWidth = selectTSML(w, "100%", "50%", "50%", "50%")
 
   const [spinnerDisplay, setSpinnerDisplay] = useState("none");
   const [iconDisplay, setIconDisplay] = useState("block");
@@ -35,16 +44,12 @@ const FreeQuoteModal = (props) => {
     "userAddress",
     "userEmail",
     "userPhone",
-    "userName",
+    "userFirstName",
+    "userLastName",
     "roofMaterial",
     "roofAge",
-    "roofPitch",
-    "targetOffset",
     "averageBill",
-    "billingCycle",
-    "systemType",
-    "batteryBackup",
-    "budget",
+    "panelRating",
   ];
 
   const formRefs = {};
@@ -120,15 +125,21 @@ const FreeQuoteModal = (props) => {
       modalVis={props.modalVis}
       modalWidth={quoteModalWidth}
       modalHeight={quoteModalHeight}
-      modalMaxHeight={quoteModalMaxHeight}>
-      <form className={styles.form} onSubmit={handleSubmit} style={{padding: formPadding}}>
+      modalMaxHeight={quoteModalMaxHeight}
+    >
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit}
+        style={{ padding: formPadding }}
+      >
         <div
           className={`${styles.nonButtonContainer} noscroll`}
           style={{
             maskImage: scrollMaskImage,
             WebkitMaskImage: scrollMaskImage,
-            zoom: props.zoom
-          }}>
+            zoom: props.zoom,
+          }}
+        >
           <div className={modalStyles.sectionContainer}>
             <div className={modalStyles.sectionHeader}>
               <img
@@ -138,42 +149,54 @@ const FreeQuoteModal = (props) => {
               />{" "}
               <div>Contact Information</div>
             </div>
-            <GeneralInput
-              label="project address"
-              type="text"
-              style={{ maxWidth: "100%" }}
-              placeholder="Address"
-              inputRef={formRefs.userAddress}
-              required={true}
-            />
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
                 flexDirection: upperFlexDirection,
-              }}>
+              }}
+            >
               <GeneralInput
-                label="your name"
+                label="first name *"
                 type="text"
-                placeholder="Name"
-                inputRef={formRefs.userName}
+                inputRef={formRefs.userFirstName}
                 required={true}
               />
               <GeneralInput
-                label="phone number"
+                label="last name *"
+                type="text"
+                inputRef={formRefs.userLastName}
+                required={true}
+              />
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexDirection: upperFlexDirection,
+              }}
+            >
+              <GeneralInput
+                label="phone *"
                 type="number"
-                placeholder="Phone"
                 inputRef={formRefs.userPhone}
                 required={true}
               />
               <GeneralInput
-                label="email address"
+                label="email *"
                 type="email"
-                placeholder="Email"
                 inputRef={formRefs.userEmail}
                 required={true}
               />
             </div>
+            <GeneralInput
+              label="Project Address *"
+              type="text"
+              style={{ maxWidth: "100%" }}
+              inputRef={formRefs.userAddress}
+              required={true}
+            />
           </div>
           <div
             style={{
@@ -181,7 +204,8 @@ const FreeQuoteModal = (props) => {
               flexDirection: lowerSectionFlexDirection,
               width: "100%",
               justifyContent: "space-between",
-            }}>
+            }}
+          >
             <div className={modalStyles.sectionContainer}>
               <div className={modalStyles.sectionHeader}>
                 <img
@@ -189,165 +213,117 @@ const FreeQuoteModal = (props) => {
                   src={roof_icon}
                   alt="roof icon"
                 />{" "}
-                <div>Roof Details</div>
+                <div>Project Details</div>
               </div>
               <div
                 style={{
                   display: "flex",
                   flexDirection: lowerSectionInputsFlexDirection,
-                }}>
+                  width: "100%"
+                }}
+              >
                 <GeneralInput
-                  label="Roof Material"
+                  label="Roof Material *"
                   type="text"
                   style={{ maxWidth: "100%" }}
-                  placeholder="Asphalt, Metal, etc. "
                   inputRef={formRefs.roofMaterial}
                   required={true}
                 />
                 <GeneralInput
                   label="Roof Age"
-                  type="text"
-                  placeholder="Num. Years"
+                  type="number"
                   inputRef={formRefs.roofAge}
-                  required={true}
+                  required={false}
                 />
-                <GeneralInput
-                  label="Roof Pitch"
-                  type="text"
-                  placeholder="Flat, Mid, Steep?"
-                  inputRef={formRefs.roofPitch}
-                  required={true}
-                />
-              </div>
-            </div>
-            <div className={modalStyles.sectionContainer}>
-              <div className={modalStyles.sectionHeader}>
-                <img
-                  className={modalStyles.inputIcon}
-                  src={energy_icon}
-                  alt="energy icon"
-                />{" "}
-                <div>Energy Details</div>
               </div>
               <div
                 style={{
                   display: "flex",
                   flexDirection: lowerSectionInputsFlexDirection,
-                }}>
+                  width: "100%"
+                }}
+              >
                 <GeneralInput
-                  label="Target Energy Offset"
-                  type="text"
-                  style={{ maxWidth: "100%" }}
-                  placeholder="0%-100% "
-                  inputRef={formRefs.targetOffset}
-                  required={true}
-                />
-                <GeneralInput
-                  label="Average Hydro Bill"
-                  type="text"
-                  style={{ maxWidth: "100%" }}
-                  placeholder="Dollar Amount"
+                  label="Avg. Monthly Hydro Bill ($) *"
+                  type="number"
+                  style={{ maxWidth: inputLabelMaxWidth }}
                   inputRef={formRefs.averageBill}
                   required={true}
                 />
                 <GeneralInput
-                  label="Billing Cycle"
+                  label="Electrical Panel Rating (if available)"
                   type="text"
-                  style={{ maxWidth: "100%" }}
-                  placeholder="1 mo, 2 mo, etc."
-                  inputRef={formRefs.billingCycle}
-                  required={true}
-                />
-              </div>
-            </div>
-            <div
-              className={modalStyles.sectionContainer}
-              style={{ marginBottom: equipPrefMarginBottom }}>
-              <div className={modalStyles.sectionHeader}>
-                <img
-                  className={modalStyles.inputIcon}
-                  src={solar_icon}
-                  alt="energy icon"
-                />{" "}
-                <div>Equipment Preference</div>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: lowerSectionInputsFlexDirection,
-                }}>
-                <GeneralInput
-                  label="System Type"
-                  type="text"
-                  style={{ maxWidth: "100%" }}
-                  placeholder="Off-Grid or Grid-Tied"
-                  inputRef={formRefs.systemType}
-                  required={true}
-                />
-                <GeneralInput
-                  label="Battery Backup"
-                  type="text"
-                  style={{ maxWidth: "100%" }}
-                  placeholder="Yes/No"
-                  inputRef={formRefs.batteryBackup}
-                  required={true}
-                />
-                <GeneralInput
-                  label="Budget"
-                  type="text"
-                  style={{ maxWidth: "100%" }}
-                  placeholder="Dollar Range"
-                  inputRef={formRefs.budget}
-                  required={true}
+                  style={{ maxWidth: inputLabelMaxWidth }}
+                  inputRef={formRefs.panelRating}
+                  required={false}
                 />
               </div>
             </div>
           </div>
-          {isMobile(w)?<SubmitButton buttonFontSize={buttonFontSize} iconDisplay={iconDisplay} spinnerDisplay={spinnerDisplay}/>:null }       
+          {isMobile(w) ? (
+            <SubmitButton
+              buttonFontSize={buttonFontSize}
+              iconDisplay={iconDisplay}
+              spinnerDisplay={spinnerDisplay}
+            />
+          ) : null}
         </div>
-        {!isMobile(w)?<SubmitButton buttonFontSize={buttonFontSize} iconDisplay={iconDisplay} spinnerDisplay={spinnerDisplay}/>:null }       
+        {!isMobile(w) ? (
+          <SubmitButton
+            buttonFontSize={buttonFontSize}
+            iconDisplay={iconDisplay}
+            spinnerDisplay={spinnerDisplay}
+          />
+        ) : null}
       </form>
     </Modal>
   );
 };
 
-const SubmitButton = props =>{
-  const {width} = useWindowSize()
-  const marginBottom = selectTSML(width, "18rem")
+const SubmitButton = (props) => {
+  const { width } = useWindowSize();
+  const marginBottom = selectTSML(width, "18rem");
 
-  return(<GeneralButton
-    style={{
-      backgroundColor: "transparent",
-      boxShadow: "none",
-      fontSize: "1.6rem",
-      alignSelf: "flex-start",
-      display: "flex",
-      width: "100%",
-      justifyContent: "flex-end",
-      alignItems: "center",
-      marginBottom: marginBottom
-    }}>
-    <div style={{ fontSize: props.buttonFontSize }}>Submit Quote Request</div>
-
-    <img
+  return (
+    <GeneralButton
       style={{
-        marginLeft: "0.6rem",
-        height: "2.3rem",
-        display: props.iconDisplay,
+        backgroundColor: "transparent",
+        boxShadow: "none",
+        fontSize: "1.3rem",
+        alignSelf: "flex-start",
+        display: "flex",
+        width: "100%",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        marginBottom: marginBottom,
       }}
-      src={sendmail_icon}
-      alt="send icon"
-    />
-    <div
-      id="quoteModalSpinner"
-      style={{
-        marginLeft: "1rem",
-        display: props.spinnerDisplay,
-        zoom: "0.8",
-      }}>
-      <Spinner animation="border" role="status" />
-    </div>
-  </GeneralButton>)
-}
+    >
+      <div className={styles.submitButtonContainer}
+      ><div style={{  fontSize: props.buttonFontSize }}>Request Quote</div>
+
+      <img
+        style={{
+          marginLeft: "0.6rem",
+          height: "2rem",
+          display: props.iconDisplay,
+          filter: "invert(1)"
+        }}
+        src={sendmail_icon}
+        alt="send icon"
+      />
+      <div
+        id="quoteModalSpinner"
+        style={{
+          marginLeft: "1rem",
+          display: props.spinnerDisplay,
+          zoom: "0.8",
+        }}
+      >
+        <Spinner animation="border" role="status" />
+      </div></div>
+      
+    </GeneralButton>
+  );
+};
 
 export default FreeQuoteModal;

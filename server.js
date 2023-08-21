@@ -64,18 +64,13 @@ app.post("/quote", async (req, res) => {
       subject: "Quote Request From Helion Site",
       text: `
       Project Address: ${req.body.userAddress}\n
-      Client Name: ${req.body.userName}\n
+      Client Name: ${req.body.userFirstName} ${req.body.userLastName}\n
       Phone: ${req.body.userPhone}\n
       Email: ${req.body.userEmail}\n\n
       Roof Material: ${req.body.roofMaterial}\n
       Roof Age: ${req.body.roofAge}\n
-      Roof Pitch: ${req.body.roofPitch}\n
-      Target Offset: ${req.body.targetOffset}\n
       Average Bill: ${req.body.averageBill}\n
-      Billing Cycle: ${req.body.billingCycle}\n
-      System Type: ${req.body.systemType}\n
-      Battery Backup: ${req.body.batteryBackup}\n
-      Budget: ${req.body.budget}\n`,
+      Panel Rating: ${req.body.panelRating}\n`,
     });
   } catch (e) {
     console.log(e);

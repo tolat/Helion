@@ -8,6 +8,7 @@ input {
   display: flex;
   flex-direction: column;
   font-family: "Raleway";
+  
 }
 
 .label {
@@ -21,14 +22,16 @@ input {
 .input {
   height: 2.5rem;
   border: none;
-  border-bottom: 1px solid rgb(190, 190, 190);
   font-size: 1rem;
   box-sizing: border-box;
   margin: 0.5rem;
-  background-color: transparent;
+  background-color: rgb(240, 240, 240);
   border-radius: 0;
+  padding-left: 0.5rem;
+  transition: border 0.15s linear;
+  border: 1px solid rgb(240, 240, 240);
 }
 
 .input:focus {
-  border-bottom: 1px solid rgb(78, 78, 78);
+  border-bottom: 1px solid rgb(66, 113, 183);
 }

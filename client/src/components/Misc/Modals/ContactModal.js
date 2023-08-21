@@ -14,8 +14,7 @@ import { useWindowSize } from "usehooks-ts";
 
 const ContactModal = (props) => {
   const w = props.viewportWidth;
-  const inputDisplay = selectTSML(w, "column");
-  const inputWidth = selectTSML(w, "100%", "30%", "30%", "30%");
+  const inputDisplay = selectTSML(w, "column", "row", "row", "row");
   const textAreaBottMarg = selectTSML(w, "2rem");
   const scrollMaskImage = selectTSML(w, "", "none", "none", "none");
   const quoteModalWidth = selectTSML(w, "100%", "", "", "");
@@ -29,7 +28,8 @@ const ContactModal = (props) => {
   const [iconDisplay, setIconDisplay] = useState("block");
 
   const userEmailRef = useRef();
-  const userNameRef = useRef();
+  const userFirstNameRef = useRef();
+  const userLastNameRef = useRef();
   const userPhoneRef = useRef();
   const userMessageRef = useRef();
 
@@ -43,7 +43,8 @@ const ContactModal = (props) => {
     }
 
     const formData = {
-      name: userNameRef.current.value,
+      firstName: userFirstNameRef.current.value,
+      lastName: userLastNameRef.current.value,
       phone: userPhoneRef.current.value,
       email: userEmailRef.current.value,
       message: userMessageRef.current.value,
@@ -51,7 +52,8 @@ const ContactModal = (props) => {
 
     const resetSuccess = () => {
       userEmailRef.current.value = "";
-      userNameRef.current.value = "";
+      userFirstNameRef.current.value = "";
+      userLastNameRef.current.value="";
       userPhoneRef.current.value = "";
       userMessageRef.current.value = "";
 
@@ -129,29 +131,41 @@ const ContactModal = (props) => {
                 justifyContent: "space-between",
               }}>
               <GeneralInput
-                label="Full Name"
+                label="First Name *"
                 type="text"
-                style={{ maxWidth: inputWidth }}
-                placeholder="Name"
-                inputRef={userNameRef}
+                style={{ maxWidth: "100%" }}
+                inputRef={userFirstNameRef}
                 required={true}
               />
               <GeneralInput
-                label="Phone Number"
+                label="Last Name *"
                 type="text"
-                style={{ maxWidth: inputWidth }}
-                placeholder="Number"
+                style={{ maxWidth: "100%" }}
+                inputRef={userLastNameRef}
+                required={true}
+              />
+              
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: inputDisplay,
+                justifyContent: "space-between",
+              }}>
+                <GeneralInput
+                label="Phone"
+                type="text"
+                style={{ maxWidth: "100%" }}
                 inputRef={userPhoneRef}
               />
               <GeneralInput
-                label="Email Address"
+                label="Email *"
                 type="email"
-                style={{ maxWidth: inputWidth }}
-                placeholder="Email"
+                style={{ maxWidth: "100%" }}
                 inputRef={userEmailRef}
                 required={true}
               />
-            </div>
+              </div>
           </div>
           <div
             className={modalStyles.sectionContainer}
@@ -167,7 +181,7 @@ const ContactModal = (props) => {
             <textarea
               ref={userMessageRef}
               className={styles.textArea}
-              rows="8"
+              rows="5"
               required
             />
           </div>
@@ -188,7 +202,7 @@ const SubmitButton = props =>{
   style={{
     backgroundColor: "transparent",
     boxShadow: "none",
-    fontSize: "1.6rem",
+    fontSize: "1.3rem",
     width: "100%",
     alignSelf: "flex-start",
     display: "flex",
@@ -196,22 +210,26 @@ const SubmitButton = props =>{
     alignItems: "center",
     marginBottom: marginBottom
   }}>
-  <div style={{ fontSize: props.buttonFontSize }}>Send Message</div>
+    <div className={styles.submitButtonContainer}>
+    <div style={{ fontSize: props.buttonFontSize }}>Send Message</div>
 
-  <img
-    style={{
-      marginLeft: "0.6rem",
-      height: "2.3rem",
-      display: props.iconDisplay,
-    }}
-    src={sendmail_icon}
-    alt="send icon"
-  />
-  <div
-    id="contactModalSpinner"
-    style={{ marginLeft: "2rem", display: props.spinnerDisplay }}>
-    <Spinner animation="border" role="status" />
-  </div>
+<img
+  style={{
+    marginLeft: "0.6rem",
+    height: "2rem",
+    display: props.iconDisplay,
+    filter: "invert(1)"
+  }}
+  src={sendmail_icon}
+  alt="send icon"
+/>
+<div
+  id="contactModalSpinner"
+  style={{ marginLeft: "2rem", display: props.spinnerDisplay }}>
+  <Spinner animation="border" role="status" />
+</div>
+    </div>
+ 
 </GeneralButton>
   )
   
