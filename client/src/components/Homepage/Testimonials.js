@@ -19,6 +19,7 @@ const Testimonials = (props) => {
   const w = props.viewportWidth;
   const padding = selectTSML(w, "0rem", "2rem", "2rem", "2rem");
   const paddingBottom=selectTSML(w, "0")
+ 
 
 
   return (
@@ -28,15 +29,9 @@ const Testimonials = (props) => {
       }}
     > 
       
-      <CentralSection
-        containerStyle={{
-          zoom: props.zoom,
-          padding: padding,
-        }}
-        style={{ display: "flex", flexDirection: "column", paddingBottom: paddingBottom }}
-      >
+      
         <Carousel viewportWidth={w}></Carousel>
-      </CentralSection>
+   {/*    </CentralSection> */}
    </div> 
   );
 };
@@ -56,7 +51,7 @@ const Carousel = (props) => {
   const containerWidth = selectTSML(w, "85%")
   const containerMarginLeft = selectTSML(w, "7.5%")
   const containerMarginTop = selectTSML(w, "2rem", "3rem", "4rem", "4rem")
-
+  const carouselDots = selectTSML(w, false, true, true, true)
 
   const handleDragStart = (e) => e.preventDefault();
   const productCrouselItems = testimonials.map((t) => (
@@ -68,8 +63,7 @@ const Carousel = (props) => {
         justifyContent: "center",
         width: containerWidth,
         marginTop: containerMarginTop,
-        marginLeft: containerMarginLeft
-
+        marginLeft: containerMarginLeft,
       }}
       onDragStart={handleDragStart}
     >
@@ -91,7 +85,7 @@ const Carousel = (props) => {
       autoPlay={true}
       items={productCrouselItems}
       disableButtonsControls={true}
-      disableDotsControls={true}
+      disableDotsControls={!carouselDots}
       infinite={true}
       animationDuration={2000}
       autoPlayInterval={10000}

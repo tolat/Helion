@@ -12,13 +12,14 @@ const Banner1 = (props) => {
   const w = props.viewportWidth;
   const background = selectTSML(w, bg_parminder, bg_parminder, bg_parminder, bg_parminder);
   const minHeight = selectTSML(w, "100vh", "28rem", "28rem", "46rem");
-  const fontSize = selectTSML(w, "1.5rem", "2rem", "2.2rem", "");
+  const fontSize = selectTSML(w, "1.5rem", "2.2rem", "2.5rem", "3rem");
   const nebcepJustify = selectTSML(w, "center", "end", "", "");
   const expandButtonMargin = selectTSML(w, "4rem", "", "", "");
+  const expandButtonDisplay  =selectTSML(w,"", "none", "none", "none")
   const textAlign = selectTSML(w, "left");
   const nabcepDisplay = selectTSML(w, "flex");
   const bannerAlign = selectTSML(w, "center");
-  const imgHeight = selectTSML(w, "8rem", "8rem", "9rem", "");
+  const imgHeight = selectTSML(w, "8rem", "8rem", "11rem", "12rem");
   const imgMargin = selectTSML(
     w,
     "2rem 3rem 0 3rem",
@@ -41,7 +42,7 @@ const Banner1 = (props) => {
     "-4.7rem",
     "-4.7rem"
   );
-  const phoneNumberFontSize = selectTSML(w, "1.3rem", "2rem", "2.4rem", "2.4rem");
+  const phoneNumberFontSize = selectTSML(w, "1.3rem", "2rem", "2.8rem", "2.8rem");
   const phoneNumberMargin = selectTSML(
     w,
     "1rem 0 0 1rem",
@@ -74,7 +75,7 @@ const Banner1 = (props) => {
               >
                 Residential solar installation<br></br>
                 Pre-wiring and consultation<br></br>
-                Off-grid and grid-tied systems<br></br>
+                Off-grid & grid-tied systems<br></br>
               </div>
               <div
                 style={{
@@ -82,7 +83,7 @@ const Banner1 = (props) => {
                   margin: phoneNumberMargin,
                   textAlign: phoneNumberTextAlign,
                fontFamily: "Arvo",
-               fontWeight: "bold"
+             
                 }}
               >
                 604.723.5351
@@ -110,6 +111,7 @@ const Banner1 = (props) => {
               <ExpandButton
                 style={{
                   marginBottom: expandButtonMargin,
+                  display: expandButtonDisplay
                 }}
                 scrollToId="solarProgramsSection"
               />

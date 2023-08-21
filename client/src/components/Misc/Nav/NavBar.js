@@ -17,6 +17,8 @@ const NavBar = (props) => {
   const burgerMenuDisplay = selectTSML(width, "flex");
   const buttonsDisplay = selectTSML(width, "none");
   const [isOpen, setOpen] = useState(false);
+  const logoHeight = selectTSML(width, "7rem", "12rem", "12rem", "12rem")
+  const logoMargin = selectTSML(width, "1rem 0 0rem 1rem", "5rem 0 0 6rem", "5rem 0 0 8rem", "5rem 0 0 6rem")
 
   const onQuoteButtonClick = () => {
     handleToggleModal(props.setQuoteModalVis);
@@ -50,7 +52,7 @@ const NavBar = (props) => {
     <React.Fragment>
       <div className={styles.container}>
         <div className={styles.navbar} style={{ height: barHeight }} onClick={goHome}>
-          <img className={styles.navbarLogo} src={logo} alt="company logo" />
+          <img style={{height: logoHeight, margin: logoMargin}} className={styles.navbarLogo} src={logo} alt="company logo" />
           <div
             className={styles.buttonContainer}
             style={{ display: buttonsDisplay }}>
@@ -60,7 +62,7 @@ const NavBar = (props) => {
               text="Free Quote"
               onClick={onQuoteButtonClick}
               black={true}
-              style={{ borderRadius: "2px", padding: "0.8rem", fontWeight: "bold" }}
+              style={{ padding: "0.8rem", fontWeight: "bold" }}
             />
           </div>
         </div>
