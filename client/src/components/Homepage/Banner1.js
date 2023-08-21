@@ -11,7 +11,7 @@ import nabcepSeal from "../../images/pv_assoc_seal.png";
 const Banner1 = (props) => {
   const w = props.viewportWidth;
   const background = selectTSML(w, bg_parminder, bg_parminder, bg_parminder, bg_parminder);
-  const minHeight = selectTSML(w, "100vh", "28rem", "28rem", "46rem");
+  const minHeight = selectTSML(w, "100vh", "33rem", "40rem", "46rem");
   const fontSize = selectTSML(w, "1.5rem", "2.2rem", "2.5rem", "3rem");
   const nebcepJustify = selectTSML(w, "center", "end", "", "");
   const expandButtonMargin = selectTSML(w, "4rem", "", "", "");
