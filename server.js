@@ -36,13 +36,14 @@ app.get("/", (req, res) => {
 
 // POST route for sending emailed message from the Contact form
 app.post("/message", async (req, res) => {
+  console.log("post message request received")
   try {
     await transporter.sendMail({
       from: req.body.email,
-      to: "heliosolarsystems@gmail.com",
+      to: `${process.env.GOOGLE_APP_EMAIL}`,
       subject: "Message From Heliosite ",
       text: `
-      Name: ${req.body.name}\n
+      Name: ${req.body.firstName} ${req.body.lastName}\n
       Phone: ${req.body.phone}\n
       Email: ${req.body.email}\n\n
       ${req.body.message}`,
@@ -57,6 +58,7 @@ app.post("/message", async (req, res) => {
 
 // POST route for sending emailed quote request from the free quote form
 app.post("/quote", async (req, res) => {
+  console.log("post quote request received")
   try {
     await transporter.sendMail({
       from: req.body.userEmail,

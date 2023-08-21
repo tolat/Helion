@@ -90,7 +90,7 @@ const ContactModal = (props) => {
     setIconDisplay("none");
 
     try {
-      sendMessage(formData, "/quote", resetSuccess, resetFailure);
+      sendMessage(formData, "/message", resetSuccess, resetFailure);
     } catch (e) {
       resetFailure(e);
     }
