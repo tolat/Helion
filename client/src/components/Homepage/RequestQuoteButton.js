@@ -2,7 +2,7 @@ import CentralSection from "../GeneralUI/CentralSection";
 import GeneralButton from "../GeneralUI/GeneralButton";
 import { handleToggleModal } from "../../utils";
 import { selectTSML } from "../../utils";
-import requestQuoteIcon from "../../images/requestQuote.png";
+import requestQuoteIcon from "../../images/energy_icon.png";
 
 const RequestQuoteButton = (props) => {
   const w = props.viewportWidth;
@@ -11,7 +11,7 @@ const RequestQuoteButton = (props) => {
     handleToggleModal(props.setModalVis);
   };
 
-  const fontSize = selectTSML(w, "1.3rem", "1.8rem", "2rem", "2rem");
+  const fontSize = selectTSML(w, "1.3rem", "1.6rem", "1.8rem", "2rem");
   const iconHeight = selectTSML(w, "2.5rem", "3.5rem", "3.5rem", "3.5rem");
   const iconMarginRight = selectTSML(w, "0.5rem", "1rem", "1rem", "1rem");
   return (
@@ -28,7 +28,7 @@ const RequestQuoteButton = (props) => {
       onClick={clickHandler}
     >
       <img
-        style={{ height: iconHeight, marginRight: iconMarginRight }}
+        style={{ filter: "invert(1)", height: iconHeight, marginRight: iconMarginRight }}
         src={requestQuoteIcon}
         alt="request quote icon"
       />

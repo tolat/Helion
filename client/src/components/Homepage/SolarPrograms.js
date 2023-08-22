@@ -15,7 +15,7 @@ const SolarPrograms = (props) => {
   const w = props.viewportWidth;
   const nm_graphic = selectTSML(w, nm_ver, nm_wide, nm_wide, nm_wide);
   const gh_graphic = selectTSML(w, gh_hor, gh_hor, gh_hor, gh_hor);
-  const mainFontSize = selectTSML(w, "0.8rem", "1.1rem", "1.1rem", "1.1rem");
+  const mainFontSize = selectTSML(w, "0.9rem", "1.4rem", "1.2rem", "1.1rem");
   const incentiveFontSize = selectTSML(w, "1.2rem");
   const headerFontSize = selectTSML(w, "1.8rem");
   const headerMargin1 = selectTSML(
@@ -32,8 +32,8 @@ const SolarPrograms = (props) => {
     "4rem 0 2rem 3rem",
     "4rem 0 2rem 3rem"
   );
-  const containerFlexDirection = selectTSML(w, "column", "row", "row", "row");
-  const tileWidth = selectTSML(w, "100%", "50%", "50%", "50%");
+  const containerFlexDirection = selectTSML(w, "column", "column", "row", "row");
+  const tileWidth = selectTSML(w, "100%", "100%", "50%", "50%");
   const tile1padding = selectTSML(w, "2rem 0 0 0", "2rem", "2rem", "2rem");
   const tile2padding = selectTSML(w, "1rem");
   const containerPadding = selectTSML(w, "0");
@@ -47,8 +47,10 @@ const SolarPrograms = (props) => {
   const imgonlyDisplay = selectTSML(w, "none");
   const tile1MarginBottom = selectTSML(w, "1rem", "4rem", "4rem", "4rem");
   const tile2MarginBottom = selectTSML(w, "2rem", "6rem", "6rem", "6rem");
-  const nmImgPadding = selectTSML(w, "0", "1rem", "1rem", "1rem");
+  const nmImgPadding = selectTSML(w, "0", "5rem", "1rem", "1rem");
   const incentiveTextPadding = selectTSML(w, "0", "1rem", "1rem", "1rem");
+  const marginContainer = selectTSML(w, "0rem 0rem 0rem 0rem", "2rem 2rem 2rem 2rem", "2rem 4rem 4rem 4rem", "2rem 4rem 4rem 4rem");
+
 
   return (
     <div style={{ zoom: props.zoom }}>
@@ -56,7 +58,7 @@ const SolarPrograms = (props) => {
         containerStyle={{
           padding: containerPadding,
         }}
-        style={{ flexDirection: "column" }}
+        style={{ margin: marginContainer, flexDirection: "column" }}
         id="solarProgramsSection"
       >
         <div
@@ -139,7 +141,7 @@ const SolarPrograms = (props) => {
           padding: container2Padding,
           backgroundColor: "#f9f9f9",
         }}
-        style={{ flexDirection: "column" }}
+        style={{ margin: marginContainer, flexDirection: "column" }}
       >
         <div
           className={styles.header}
@@ -156,7 +158,7 @@ const SolarPrograms = (props) => {
           }}
         >
           <img
-            style={{ display: "block", width: tileWidth, padding: "0 1rem" }}
+            style={{ display: "block", width: tileWidth, padding: nmImgPadding }}
             src={gh_graphic}
             alt="greener homes path graphic"
           />

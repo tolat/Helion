@@ -10,6 +10,7 @@ const Footer = (props) => {
   const textMaxWidth = selectTSML(w, "", "", "35rem", "40rem");
   const marginTop = selectTSML(w, "3rem");
   const mainFontSize = selectTSML(w, "0.8rem");
+  const sideTileMargin = selectTSML(w, "0", "0rem", "3rem")
 
   return (
     <div style={{ zoom: props.zoom }}>
@@ -17,6 +18,7 @@ const Footer = (props) => {
         style={{
           backgroundColor: "#1d222a",
           paddingTop: "4rem",
+          
         }}
       >
         <CentralSection>
@@ -24,7 +26,7 @@ const Footer = (props) => {
             className={styles.container}
             style={{ flexDirection: flexDirection, marginTop: marginTop }}
           >
-            <FooterTile key="ft1" header="Contact">
+            <FooterTile style={{marginLeft: sideTileMargin}} key="ft1" header="Contact">
               <div
                 style={{
                   display: "flex",
@@ -70,7 +72,7 @@ const Footer = (props) => {
               }}
             >
               <img
-                style={{ width: "15rem", alignSelf: "center" }}
+                style={{marginRight: sideTileMargin, width: "15rem", alignSelf: "center" }}
                 src={light_logo}
                 alt="company logo"
               />
