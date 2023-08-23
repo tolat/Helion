@@ -18,7 +18,7 @@ const NavBar = (props) => {
   const buttonsDisplay = selectTSML(width, "none");
   const [isOpen, setOpen] = useState(false);
   const logoHeight = selectTSML(width, "7rem", "12rem", "12rem", "12rem")
-  const logoMargin = selectTSML(width, "1rem 0 0rem 1rem", "5rem 0 0 6rem", "5rem 0 0 8rem", "5rem 0 0 6rem")
+  const logoMargin = selectTSML(width, "1rem 0 0rem 1rem", "5rem 0 0 2rem", "5rem 0 0 1rem", "5rem 0 0 1rem")
 
   const onQuoteButtonClick = () => {
     handleToggleModal(props.setQuoteModalVis);
@@ -56,8 +56,8 @@ const NavBar = (props) => {
           <div
             className={styles.buttonContainer}
             style={{ display: buttonsDisplay }}>
-            <NavButton text="Contact" onClick={onContactButtonClick} />
-            <NavButton text="FAQ" onClick={onFAQButtonClick} />
+            <NavButton style={{marginRight: "2rem"}} text="Contact" onClick={onContactButtonClick} />
+            <NavButton style={{marginRight: "2rem"}} text="FAQ" onClick={onFAQButtonClick} />
             <NavButton
               text="Free Quote"
               onClick={onQuoteButtonClick}
