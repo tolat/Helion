@@ -2,7 +2,13 @@ import GeneralButton from "../../GeneralUI/GeneralButton";
 import GeneralInput from "../../GeneralUI/GeneralInput";
 import modalStyles from "../../GeneralUI/Modal.module.css";
 import styles from "./ContactModal.module.css";
-import { selectTSML, sendMessage, showFlash, closeFlash, isMobile } from "../../../utils";
+import {
+  selectTSML,
+  sendMessage,
+  showFlash,
+  closeFlash,
+  isMobile,
+} from "../../../utils";
 import React, { useState, useRef } from "react";
 import Modal from "../../GeneralUI/Modal";
 import Spinner from "react-bootstrap/Spinner";
@@ -21,8 +27,7 @@ const ContactModal = (props) => {
   const quoteModalHeight = selectTSML(w, "100%", "", "", "");
   const quoteModalMaxHeight = selectTSML(w, "", "80%", "80%", "80%");
   const buttonFontSize = selectTSML(w, "1.4rem", "", "", "");
-  const formPadding = selectTSML(w, "3rem 1rem 3rem 1rem")
-
+  const formPadding = selectTSML(w, "3rem 1rem 3rem 1rem");
 
   const [spinnerDisplay, setSpinnerDisplay] = useState("none");
   const [iconDisplay, setIconDisplay] = useState("block");
@@ -53,7 +58,7 @@ const ContactModal = (props) => {
     const resetSuccess = () => {
       userEmailRef.current.value = "";
       userFirstNameRef.current.value = "";
-      userLastNameRef.current.value="";
+      userLastNameRef.current.value = "";
       userPhoneRef.current.value = "";
       userMessageRef.current.value = "";
 
@@ -97,8 +102,6 @@ const ContactModal = (props) => {
   };
 
   return (
-   
-
     <Modal
       viewportWidth={props.viewportWidth}
       modalVis={props.modalVis}
@@ -106,15 +109,21 @@ const ContactModal = (props) => {
       modalWidth={quoteModalWidth}
       modalHeight={quoteModalHeight}
       modalMaxHeight={quoteModalMaxHeight}
-      side>
-      <form className={styles.form} style={{padding: formPadding}} onSubmit={handleSubmit}>
+      side
+    >
+      <form
+        className={styles.form}
+        style={{ padding: formPadding }}
+        onSubmit={handleSubmit}
+      >
         <div
           className={`${styles.nonButtonContainer} noscroll`}
           style={{
             maskImage: scrollMaskImage,
             WebkitMaskImage: scrollMaskImage,
-            zoom: props.zoom
-          }}>
+            zoom: props.zoom,
+          }}
+        >
           <div className={modalStyles.sectionContainer}>
             <div className={modalStyles.sectionHeader}>
               <img
@@ -129,7 +138,8 @@ const ContactModal = (props) => {
                 display: "flex",
                 flexDirection: inputDisplay,
                 justifyContent: "space-between",
-              }}>
+              }}
+            >
               <GeneralInput
                 label="First Name *"
                 type="text"
@@ -144,15 +154,15 @@ const ContactModal = (props) => {
                 inputRef={userLastNameRef}
                 required={true}
               />
-              
             </div>
             <div
               style={{
                 display: "flex",
                 flexDirection: inputDisplay,
                 justifyContent: "space-between",
-              }}>
-                <GeneralInput
+              }}
+            >
+              <GeneralInput
                 label="Phone"
                 type="text"
                 style={{ maxWidth: "100%" }}
@@ -165,11 +175,12 @@ const ContactModal = (props) => {
                 inputRef={userEmailRef}
                 required={true}
               />
-              </div>
+            </div>
           </div>
           <div
             className={modalStyles.sectionContainer}
-            style={{ marginBottom: textAreaBottMarg }}>
+            style={{ marginBottom: textAreaBottMarg }}
+          >
             <div className={modalStyles.sectionHeader}>
               <img
                 className={modalStyles.inputIcon}
@@ -185,55 +196,65 @@ const ContactModal = (props) => {
               required
             />
           </div>
-          {isMobile(w)?<SubmitButton buttonFontSize={buttonFontSize} iconDisplay={iconDisplay} spinnerDisplay={spinnerDisplay}/>:null }       
+          {isMobile(w) ? (
+            <SubmitButton
+              buttonFontSize={buttonFontSize}
+              iconDisplay={iconDisplay}
+              spinnerDisplay={spinnerDisplay}
+            />
+          ) : null}
         </div>
-            {!isMobile(w)?<SubmitButton buttonFontSize={buttonFontSize} iconDisplay={iconDisplay} spinnerDisplay={spinnerDisplay}/>:null }       
+        {!isMobile(w) ? (
+          <SubmitButton
+            buttonFontSize={buttonFontSize}
+            iconDisplay={iconDisplay}
+            spinnerDisplay={spinnerDisplay}
+          />
+        ) : null}
       </form>
     </Modal>
-  
   );
 };
 
-const SubmitButton = props =>{
-  const {width} = useWindowSize()
-  const marginBottom = selectTSML(width, "18rem")
-  return(
+const SubmitButton = (props) => {
+  const { width } = useWindowSize();
+  const marginBottom = selectTSML(width, "18rem");
+  return (
     <GeneralButton
-  style={{
-    backgroundColor: "transparent",
-    boxShadow: "none",
-    fontSize: "1.3rem",
-    width: "100%",
-    alignSelf: "flex-start",
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    marginBottom: marginBottom
-  }}>
-    <div className={styles.submitButtonContainer}>
-    <div style={{ fontSize: props.buttonFontSize }}>Send Message</div>
+      style={{
+        backgroundColor: "transparent",
+        boxShadow: "none",
+        fontSize: "1.3rem",
+        width: "100%",
+        alignSelf: "flex-start",
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        marginBottom: marginBottom,
+      }}
+    >
+      <div className={styles.submitButtonContainer}>
+        <div style={{ fontSize: props.buttonFontSize }}>Send Message</div>
 
-<img
-  style={{
-    marginLeft: "0.6rem",
-    height: "2rem",
-    display: props.iconDisplay,
-    filter: "invert(1)"
-  }}
-  src={sendmail_icon}
-  alt="send icon"
-/>
-<div
-  id="contactModalSpinner"
-  style={{ marginLeft: "2rem", display: props.spinnerDisplay }}>
-  <Spinner animation="border" role="status" />
-</div>
-    </div>
- 
-</GeneralButton>
-  )
-  
-
-}
+        <img
+          style={{
+            marginLeft: "0.6rem",
+            height: "2rem",
+            display: props.iconDisplay,
+            filter: "invert(1)",
+          }}
+          src={sendmail_icon}
+          alt="send icon"
+        />
+        <div
+          id="contactModalSpinner"
+          style={{ marginLeft: "2rem", display: props.spinnerDisplay }}
+        >
+          <Spinner animation="border" role="status" />
+        </div>
+      </div>
+    </GeneralButton>
+  );
+};
 
 export default ContactModal;

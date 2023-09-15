@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 
 // POST route for sending emailed message from the Contact form
 app.post("/message", async (req, res) => {
-  console.log("post message request received")
+  console.log("post message request received");
   try {
     await transporter.sendMail({
       from: req.body.email,
@@ -58,7 +58,7 @@ app.post("/message", async (req, res) => {
 
 // POST route for sending emailed quote request from the free quote form
 app.post("/quote", async (req, res) => {
-  console.log("post quote request received")
+  console.log("post quote request received");
   try {
     await transporter.sendMail({
       from: req.body.userEmail,
