@@ -74,6 +74,8 @@ const ContactModal = (props) => {
         "white"
       );
 
+      window.gtag('event', 'conversion', {'send_to': 'AW-11336437981/Cg6TCPHf8OEYEN2h0Z0q'});
+
       setTimeout(() => {
         closeFlash("appFlash");
       }, 5000);
