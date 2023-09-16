@@ -111,6 +111,9 @@ const FreeQuoteModal = (props) => {
     setSpinnerDisplay("block");
     setIconDisplay("none");
 
+     // Report conversion to Google
+     window.gtag('event', 'conversion', {'send_to': 'AW-11336437981/Cg6TCPHf8OEYEN2h0Z0q'});
+
     try {
       sendMessage(formData, "/quote", resetSuccess, resetFailure);
     } catch (e) {
