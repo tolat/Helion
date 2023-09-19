@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.a29dd2a5.css",
-    "main.js": "/static/js/main.d800032b.js",
+    "main.css": "/static/css/main.422e09d2.css",
+    "main.js": "/static/js/main.0c41d404.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
+    "static/media/marja.jpg": "/static/media/marja.fd19f9d3c4684fa6e818.jpg",
     "static/media/parminder.jpg": "/static/media/parminder.badd66732fb6e88ee133.jpg",
+    "static/media/curack.jpg": "/static/media/curack.ced727625786d42b3d0d.jpg",
     "static/media/solarspan10.jpg": "/static/media/solarspan10.4ae0f8ad179d05709c3e.jpg",
-    "static/media/solar_background3.png": "/static/media/solar_background3.695672eeb1531742ff74.png",
     "static/media/blackpanels1.jpeg": "/static/media/blackpanels1.0e017dc2466f30fd6b33.jpeg",
     "static/media/netmetering_graphic.png": "/static/media/netmetering_graphic.ab4d14b9b1de9884b21d.png",
     "static/media/OpenSans-VariableFont_wdth,wght.ttf": "/static/media/OpenSans-VariableFont_wdth,wght.a7076648e1c4bd836518.ttf",
@@ -29,15 +30,17 @@
     "static/media/aps_logo.png": "/static/media/aps_logo.d3ee904976b53c11c141.png",
     "static/media/longi_logo.png": "/static/media/longi_logo.85f8f774784ebd0cad8b.png",
     "static/media/enphase_logo.png": "/static/media/enphase_logo.003fbf15d86954f4efe3.png",
+    "static/media/quote-right.png": "/static/media/quote-right.4ef749b630afbadd638d.png",
+    "static/media/quote-left.png": "/static/media/quote-left.8017e1d1cf232a2eea07.png",
     "static/media/solaredge_logo.png": "/static/media/solaredge_logo.6ee6225f517fe893f807.png",
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
-    "main.a29dd2a5.css.map": "/static/css/main.a29dd2a5.css.map",
-    "main.d800032b.js.map": "/static/js/main.d800032b.js.map",
+    "main.422e09d2.css.map": "/static/css/main.422e09d2.css.map",
+    "main.0c41d404.js.map": "/static/js/main.0c41d404.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a29dd2a5.css",
-    "static/js/main.d800032b.js"
+    "static/css/main.422e09d2.css",
+    "static/js/main.0c41d404.js"
   ]
 }

@@ -74,7 +74,7 @@ const SolarSolutions = (props) => {
         backgroundAttachment={"scroll"}
       >
         <FullWidthSection>
-          <div style={{ maxWidth: "90rem", marginTop: containerMarginTop }}>
+          <div style={{ maxWidth: "100rem", marginTop: containerMarginTop }}>
             <div
               className={styles.header}
               style={{
@@ -105,7 +105,7 @@ const SolarSolutions = (props) => {
               display: tileDisplay,
               flexDirection: tileFlexDirection,
               justifyItems: tileJustify,
-              maxWidth: "90rem",
+              maxWidth: "100rem",
               padding: containerPadding,
               marginBottom: containerMarginBottom,
             }}

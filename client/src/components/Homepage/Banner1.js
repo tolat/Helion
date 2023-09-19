@@ -10,8 +10,8 @@ import nabcepSeal from "../../images/pv_assoc_seal.png";
 
 const Banner1 = (props) => {
   const w = props.viewportWidth;
-  const background = selectTSML(w, bg_parminder, bg_parminder, bg_parminder, bg_parminder);
-  const minHeight = selectTSML(w, "100vh", "33rem", "40rem", "46rem");
+  const background = selectTSML(w, bg_medium, bg_medium, bg_medium, bg_medium);
+  const minHeight = selectTSML(w, "100vh", "38rem", "40rem", "46rem");
   const fontSize = selectTSML(w, "1.5rem", "2.2rem", "2.5rem", "3rem");
   const nebcepJustify = selectTSML(w, "center", "end", "", "");
   const expandButtonMargin = selectTSML(w, "4rem", "", "", "");
@@ -19,7 +19,7 @@ const Banner1 = (props) => {
   const textAlign = selectTSML(w, "left");
   const nabcepDisplay = selectTSML(w, "flex");
   const bannerAlign = selectTSML(w, "center");
-  const imgHeight = selectTSML(w, "8rem", "8rem", "11rem", "12rem");
+  const imgHeight = selectTSML(w, "8rem", "8rem", "9rem", "10rem");
   const imgMargin = selectTSML(
     w,
     "2rem 3rem 0 3rem",

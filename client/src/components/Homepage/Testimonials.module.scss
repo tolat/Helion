@@ -1,0 +1,120 @@
+@import "../../globalStyles.scss";
+
+.testimonialContainer {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  justify-content: center;
+  font-family: "Open Sans";
+  margin-bottom: 8rem;
+
+  @include responsive("margin-bottom", 0, 5rem, 8rem, 8rem);
+  @include responsive("margin-top", 0rem, 3rem, 4rem, 4rem);
+  @include responsive("margin-left", 0%);
+  @include responsive("width", 100%);
+  @include responsive("flex-direction", column, row, row, row);
+  @include responsive(
+    "padding",
+    0 0 0 0,
+    0 3rem 0 3rem,
+    0 3rem 0 3rem,
+    0 3rem 0 3rem
+  );
+}
+
+.testimonialTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgb(242, 242, 242);
+  color: rgb(0, 0, 0);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 4rem 0 2rem;
+  font-family: Open Sans;
+
+  @include responsive("border-top-right-radius", 0, 5px, 5px, 5px);
+  @include responsive("border-bottom-right-radius", 0, 5px, 5px, 5px);
+  @include responsive(height, 23rem, 25rem, 25rem, 25rem);
+  @include responsive(
+    padding,
+    1rem,
+    0 4rem 0 2rem,
+    0 4rem 0 2rem,
+    0 4rem 0 2rem
+  );
+}
+
+.testimonialText {
+  width: 100%;
+
+  @include responsive("font-size", 0.9rem, 1.1rem, 1.2rem, 1.2rem);
+  @include responsive(
+    padding,
+    0 2rem 0 2rem,
+    0 4rem 0 4rem,
+    0 4rem 0 4rem,
+    0 4rem 0 4rem
+  );
+}
+
+.testimonialHeader {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+
+  @include responsive("font-size", 1rem, 1.3rem, 1.4rem, 1.8rem);
+  @include responsive(
+    padding,
+    0 2rem 0 2rem,
+    0 4rem 0 4rem,
+    0 4rem 0 4rem,
+    0 4rem 0 4rem
+  );
+}
+
+.testimonialImage {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 110rem;
+  background-size: cover;
+
+  @include responsive("display", none, block, block, block);
+}
+
+.testimonialQuoteLeft {
+  @include responsive(width, 2rem, 3rem, 3rem, 3rem);
+}
+
+.testimonialQuoteRight {
+  margin-top: -1rem;
+  align-self: flex-end;
+
+  @include responsive(width, 2rem, 3rem, 3rem, 3rem);
+}
+
+.testimonialSource {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding: 0 0 0 3rem;
+  width: 100%;
+
+  @include responsive("display", none, block, block, block);
+  @include responsive("margin-bottom", 1rem, 2rem, 0, 0);
+  @include responsive("font-size", 1rem, 1.3rem, 1.3rem, 1.3rem);
+}
+
+.carouselContainer {
+  width: 100%;
+  border-radius: 5px;
+
+  @include responsive("margin-top", 0, -9rem, -9rem, -9rem);
+}
+
+.centralSection {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
