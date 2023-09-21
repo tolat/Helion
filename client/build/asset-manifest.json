@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.422e09d2.css",
-    "main.js": "/static/js/main.0c41d404.js",
+    "main.css": "/static/css/main.b46c990d.css",
+    "main.js": "/static/js/main.b0cd4189.js",
     "static/js/787.cda0a14e.chunk.js": "/static/js/787.cda0a14e.chunk.js",
     "static/media/marja.jpg": "/static/media/marja.fd19f9d3c4684fa6e818.jpg",
     "static/media/parminder.jpg": "/static/media/parminder.badd66732fb6e88ee133.jpg",
     "static/media/curack.jpg": "/static/media/curack.ced727625786d42b3d0d.jpg",
+    "static/media/solarspan19.jpeg": "/static/media/solarspan19.623cb2157ddbe4118830.jpeg",
     "static/media/solarspan10.jpg": "/static/media/solarspan10.4ae0f8ad179d05709c3e.jpg",
     "static/media/blackpanels1.jpeg": "/static/media/blackpanels1.0e017dc2466f30fd6b33.jpeg",
     "static/media/netmetering_graphic.png": "/static/media/netmetering_graphic.ab4d14b9b1de9884b21d.png",
@@ -16,6 +17,7 @@
     "static/media/netmetering_graphic_vertical.jpg": "/static/media/netmetering_graphic_vertical.42b742ccd01cb708ce9f.jpg",
     "static/media/greener_homes_graphic.png": "/static/media/greener_homes_graphic.936778e9ada5ec5512e3.png",
     "static/media/nm_graphic_imageonly.png": "/static/media/nm_graphic_imageonly.f8b5a074f73ad79cfabd.png",
+    "static/media/worksafe.png": "/static/media/worksafe.fbb977d3e8bf74bcd750.png",
     "static/media/GH-journey-map.png": "/static/media/GH-journey-map.d71715c2c6be99113a19.png",
     "static/media/darkbg5.png": "/static/media/darkbg5.41d9b279dae862db05bc.png",
     "static/media/solarspan7.jpg": "/static/media/solarspan7.5756ffc19b8421917764.jpg",
@@ -23,6 +25,7 @@
     "static/media/microinverter_roof.jpeg": "/static/media/microinverter_roof.79d5f122f4eca0555eed.jpeg",
     "static/media/schneider_logo.png": "/static/media/schneider_logo.f5f65b76bd13bf13d815.png",
     "static/media/strings_ground.jpeg": "/static/media/strings_ground.6f86ee8771c0a674ea5f.jpeg",
+    "static/media/insurance.png": "/static/media/insurance.356e79e767dfdd2fcbba.png",
     "static/media/Arvo-Regular.ttf": "/static/media/Arvo-Regular.e3d3d53c44db025c4592.ttf",
     "static/media/cadsol_logo.png": "/static/media/cadsol_logo.27120aa33bf56fdb20d9.png",
     "static/media/kinetic_logo.png": "/static/media/kinetic_logo.7f1d4e5383a7f719f147.png",
@@ -35,12 +38,12 @@
     "static/media/solaredge_logo.png": "/static/media/solaredge_logo.6ee6225f517fe893f807.png",
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
-    "main.422e09d2.css.map": "/static/css/main.422e09d2.css.map",
-    "main.0c41d404.js.map": "/static/js/main.0c41d404.js.map",
+    "main.b46c990d.css.map": "/static/css/main.b46c990d.css.map",
+    "main.b0cd4189.js.map": "/static/js/main.b0cd4189.js.map",
     "787.cda0a14e.chunk.js.map": "/static/js/787.cda0a14e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.422e09d2.css",
-    "static/js/main.0c41d404.js"
+    "static/css/main.b46c990d.css",
+    "static/js/main.b0cd4189.js"
   ]
 }

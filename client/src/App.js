@@ -5,7 +5,7 @@ import SolarPrograms from "./components/Homepage/SolarPrograms";
 import SolarSolutions from "./components/Homepage/SolarSolutions";
 import OurProducts from "./components/Homepage/OurProducts";
 import FAQ from "./components/Homepage/FAQ";
-import Testimonials from "./components/Homepage/Testimonials"
+import Testimonials from "./components/Homepage/Testimonials";
 import Footer from "./components/Misc/Footer/Footer";
 import { useWindowSize } from "usehooks-ts";
 import FreeQuoteModal from "./components/Misc/Modals/FreeQuoteModal";
@@ -15,7 +15,8 @@ import ContactModal from "./components/Misc/Modals/ContactModal";
 import Flash from "./components/Misc/Flash/Flash";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavDrawer from "./components/Misc/Nav/NavDrawer";
-import RequestQuoteButton from "./components/Homepage/RequestQuoteButton"
+import RequestQuoteButton from "./components/Homepage/RequestQuoteButton";
+import ContactBanner from "./components/Homepage/ContactBanner";
 
 function App() {
   const { width } = useWindowSize();
@@ -25,17 +26,18 @@ function App() {
     v: "hidden",
   });
 
-  const totalZoom = selectTSML(width, "1", "0.75", "0.80", "1")
+  const totalZoom = selectTSML(width, "1", "0.75", "0.80", "1");
 
-  const onLoad = () =>{
+  const onLoad = () => {
     // eslint-disable-next-line
-    if(window.location.href.includes("quote") && quoteModalVis.v == "hidden"){
-      handleToggleModal(setQuoteModalVis)
-    } 
-  }
+    if (window.location.href.includes("quote") && quoteModalVis.v == "hidden") {
+      handleToggleModal(setQuoteModalVis);
+    }
+  };
 
   return (
     <div className={`${styles.AppContainer} noscroll`} onLoad={onLoad}>
+      <ContactBanner setModalVis={setContactModalVis} zoom={totalZoom} />
       <Flash id="appFlash" />
       <FreeQuoteModal
         viewportWidth={width}
@@ -60,17 +62,17 @@ function App() {
           setContactModalVis={setContactModalVis}
           zoom={totalZoom}
         />
-        <Banner1 viewportWidth={width} zoom={totalZoom}/>
-        <Testimonials viewportWidth={width} zoom={totalZoom}/>
-        <SolarSolutions viewportWidth={width} zoom={totalZoom}/>
-        <OurProducts zoom={totalZoom}/>
-        <SolarPrograms viewportWidth={width} zoom={totalZoom}/>
-        <FAQ viewportWidth={width} zoom={totalZoom}/>
+        <Banner1 viewportWidth={width} zoom={totalZoom} />
+        <Testimonials viewportWidth={width} zoom={totalZoom} />
+        <SolarSolutions viewportWidth={width} zoom={totalZoom} />
+        <OurProducts zoom={totalZoom} />
+        <SolarPrograms viewportWidth={width} zoom={totalZoom} />
+        <FAQ viewportWidth={width} zoom={totalZoom} />
         <RequestQuoteButton
           viewportWidth={width}
           setModalVis={setQuoteModalVis}
-        /> 
-        <Footer viewportWidth={width} zoom={totalZoom}/>
+        />
+        <Footer viewportWidth={width} zoom={totalZoom} />
       </div>
     </div>
   );

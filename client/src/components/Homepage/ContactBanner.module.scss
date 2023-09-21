@@ -1,0 +1,39 @@
+@import "../../globalStyles.scss";
+
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  --color: #565656;
+}
+
+.container {
+  padding-top: 1rem;
+  height: 4rem;
+  background-color: var(--color);
+  position: fixed;
+  color: white;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s ease-in-out;
+
+  @include responsive("width", 100%, 70%, 50%, 40%);
+  @include responsive("border-radius", 0, 2px, 2px, 2px);
+}
+
+.contactButton {
+  margin-left: 1rem;
+  background-color: white;
+  color: var(--color);
+  padding: 0.1rem 1.7rem 0.1rem 1.7rem;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.contactButton:hover {
+  cursor: pointer;
+  background-color: var(--color);
+  color: white;
+}

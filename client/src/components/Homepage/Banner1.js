@@ -6,6 +6,7 @@ import ExpandButton from "../GeneralUI/ExpandButton";
 
 import bg_medium from "../../images/solarspan10.jpg";
 import bg_parminder from "../../images/parminder.jpg"
+import bg_alt from "../../images/solarspan19.jpeg"
 import nabcepSeal from "../../images/pv_assoc_seal.png";
 
 const Banner1 = (props) => {

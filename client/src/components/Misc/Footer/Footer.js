@@ -1,8 +1,12 @@
-import styles from "./Footer.module.css";
+import styles from "./Footer.module.scss";
 import FullWidthSection from "../../GeneralUI/FullWidthSection";
 import CentralSection from "../../GeneralUI/CentralSection";
 import light_logo from "../../../images/Helion_logo_nobg_light.png";
 import { selectTSML } from "../../../utils";
+
+import nabcepLogo from "../../../images/pv_assoc_seal.png";
+import insurance from "../../../images/insurance.png";
+import worksafe from "../../../images/worksafe.png";
 
 const Footer = (props) => {
   const w = props.viewportWidth;
@@ -10,7 +14,7 @@ const Footer = (props) => {
   const textMaxWidth = selectTSML(w, "", "", "35rem", "40rem");
   const marginTop = selectTSML(w, "3rem");
   const mainFontSize = selectTSML(w, "0.8rem");
-  const sideTileMargin = selectTSML(w, "0", "0rem", "3rem")
+  const sideTileMargin = selectTSML(w, "0", "0rem", "3rem");
 
   return (
     <div style={{ zoom: props.zoom }}>
@@ -18,7 +22,6 @@ const Footer = (props) => {
         style={{
           backgroundColor: "#1d222a",
           paddingTop: "4rem",
-          
         }}
       >
         <CentralSection>
@@ -26,7 +29,11 @@ const Footer = (props) => {
             className={styles.container}
             style={{ flexDirection: flexDirection, marginTop: marginTop }}
           >
-            <FooterTile style={{marginLeft: sideTileMargin}} key="ft1" header="Contact">
+            <FooterTile
+              style={{ marginLeft: sideTileMargin }}
+              key="ft1"
+              header="Contact"
+            >
               <div
                 style={{
                   display: "flex",
@@ -36,6 +43,24 @@ const Footer = (props) => {
               >
                 <div>604.723.5351</div>
                 <div>helionsolarsystems@gmail.com</div>
+                <img
+                  className={styles.nabcepLogo}
+                  src={nabcepLogo}
+                  alt={"nabcep logo"}
+                />
+                <div className={styles.logoSmallContainer}>
+                  <img
+                    className={styles.logoSmall}
+                    src={insurance}
+                    alt={"insurance logo"}
+                  />
+                  <img
+                    className={styles.logoSmall}
+                    style={{margin: "2.5rem 0 2.5rem 0"}}
+                    src={worksafe}
+                    alt={"worksafe logo"}
+                  />
+                </div>
               </div>
             </FooterTile>
             <FooterTile
@@ -53,12 +78,17 @@ const Footer = (props) => {
                 <div>
                   Helion Solar offers turnkey residential solar installation
                   service, pre-wiring for new construction projects, as well as
-                  solar energy consultation. All of our staff are certified
-                  NABCEP solar PV associates, and we guarantee the quality of
-                  our electrical work. Our aim is to help contribute to BC's
-                  growing renewable energy economy, and to educate homeowners
-                  about the benefits of solar and the green energy incentives
-                  the Canadian government is offering.
+                  solar energy consultation.
+                  <br />
+                  <br /> All of our staff are certified NABCEP solar PV
+                  associates, and we guarantee the quality of our electrical
+                  work.
+                  <br />
+                  <br />
+                  Our aim is to help contribute to BC's growing renewable energy
+                  economy, and to educate homeowners about the benefits of solar
+                  and the green energy incentives the Canadian government is
+                  offering.
                 </div>
                 <br />
               </div>
@@ -66,13 +96,18 @@ const Footer = (props) => {
             <FooterTile
               key="ft3"
               style={{
-                justifyContent: "flex-end",
+                justifyContent: "flex-start",
                 height: "100%",
                 padding: "0",
               }}
             >
               <img
-                style={{marginRight: sideTileMargin, width: "15rem", alignSelf: "center" }}
+                style={{
+                  marginRight: sideTileMargin,
+                  marginLeft: "2rem",
+                  width: "15rem",
+                  alignSelf: "center",
+                }}
                 src={light_logo}
                 alt="company logo"
               />
