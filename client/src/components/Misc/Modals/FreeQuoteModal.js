@@ -270,9 +270,18 @@ const FreeQuoteModal = (props) => {
           </div>
 
           {props.promoCode ? (
-            <h2 style={{ padding: "0 1rem" }}>
+            <h3
+              style={{
+                color: "white",
+                fontWeight: "bold",
+                backgroundColor: "#80c080",
+                fontFamily: "Open Sans",
+                padding: "1rem",
+                margin: "0 0.5rem"
+              }}
+            >
               Promotion Applied: {props.promoCode}
-            </h2>
+            </h3>
           ) : null}
           {isMobile(w) ? (
             <SubmitButton
@@ -310,6 +319,7 @@ const SubmitButton = (props) => {
         justifyContent: "flex-end",
         alignItems: "center",
         marginBottom: marginBottom,
+        padding: "1rem 0.5rem"
       }}
     >
       <div className={styles.submitButtonContainer}>

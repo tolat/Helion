@@ -12,7 +12,11 @@ const ContactBanner = (props) => {
   }, []);
 
   const onContactButtonClick = () => {
-    handleToggleModal(props.setModalVis);
+    handleToggleModal(props.setContactModalVis);
+  };
+
+  const onQuoteButtonClick = () => {
+    handleToggleModal(props.setQuoteModalVis);
   };
 
   return (
@@ -21,6 +25,9 @@ const ContactBanner = (props) => {
         Interested in Solar? &nbsp;
         <div className={styles.contactButton} onClick={onContactButtonClick}>
           Contact Us
+        </div>
+        <div className={styles.quoteButton} onClick={onQuoteButtonClick}>
+          Request Quote
         </div>
       </div>
     </div>

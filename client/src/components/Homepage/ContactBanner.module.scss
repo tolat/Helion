@@ -22,18 +22,30 @@
   @include responsive("border-radius", 0, 2px, 2px, 2px);
 }
 
-.contactButton {
-  margin-left: 1rem;
+.quoteButton {
   background-color: white;
   color: var(--color);
-  padding: 0.1rem 1.7rem 0.1rem 1.7rem;
+  padding: 0.1rem 1.5rem 0.1rem 1.5rem;
   border: 2px solid white;
   transition: all 0.3s ease-in-out;
   border-radius: 2px;
+  font-weight: bold;
+}
+
+.quoteButton:hover {
+  cursor: pointer;
+  background-color: var(--color);
+  color: white;
+}
+
+.contactButton {
+  color: white;
+  padding: 0.1rem 1.7rem 0.1rem 1.7rem;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
 }
 
 .contactButton:hover {
   cursor: pointer;
-  background-color: var(--color);
-  color: white;
+  opacity: 0.6;
 }

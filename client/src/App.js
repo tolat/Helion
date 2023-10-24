@@ -25,15 +25,7 @@ function App() {
     o: "0",
     v: "hidden",
   });
-  const [promoCode, setPromoCode] = useState(false)
-
-  useEffect(()=>{
-    const path = window.location.pathname
-    if(path.includes('promo')){
-      const promoCode = path.slice(path.indexOf('/promo')+7)
-      setPromoCode(promoCode)
-    }
-  },[])
+  const [promoCode, setPromoCode] = useState(false);
 
   const totalZoom = selectTSML(width, "1", "0.75", "0.80", "1");
 
@@ -42,11 +34,22 @@ function App() {
     if (window.location.href.includes("quote") && quoteModalVis.v == "hidden") {
       handleToggleModal(setQuoteModalVis);
     }
+
+    const path = window.location.pathname;
+    if (path.includes("promo")) {
+      const promoCode = path.slice(path.indexOf("/promo") + 7);
+      setPromoCode(promoCode);
+      handleToggleModal(setQuoteModalVis);
+    }
   };
 
   return (
     <div className={`${styles.AppContainer} noscroll`} onLoad={onLoad}>
-      <ContactBanner setModalVis={setContactModalVis} zoom={totalZoom} />
+      <ContactBanner
+        setContactModalVis={setContactModalVis}
+        setQuoteModalVis={setQuoteModalVis}
+        zoom={totalZoom}
+      />
       <Flash id="appFlash" />
       <FreeQuoteModal
         viewportWidth={width}
