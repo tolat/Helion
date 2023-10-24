@@ -274,7 +274,7 @@ const FreeQuoteModal = (props) => {
               style={{
                 color: "#424242",
                 fontWeight: "bold",
-                backgroundColor: "#f0f0f0;",
+                backgroundColor: "#f0f0f0",
                 fontFamily: "Open Sans",
                 padding: "1rem",
                 margin: "0 0.5rem"
