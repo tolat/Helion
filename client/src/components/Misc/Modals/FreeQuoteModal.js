@@ -272,9 +272,9 @@ const FreeQuoteModal = (props) => {
           {props.promoCode ? (
             <h3
               style={{
-                color: "white",
+                color: "#424242",
                 fontWeight: "bold",
-                backgroundColor: "#80c080",
+                backgroundColor: "#f0f0f0;",
                 fontFamily: "Open Sans",
                 padding: "1rem",
                 margin: "0 0.5rem"
