@@ -30,6 +30,10 @@ app.use((req, res, next) => {
   handleCORS(req, res, next);
 });
 
+app.get("/promo/:promocode", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
+});
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
@@ -58,13 +62,13 @@ app.post("/message", async (req, res) => {
 
 // POST route for sending emailed quote request from the free quote form
 app.post("/quote", async (req, res) => {
-  console.log("post quote request received");
   try {
     await transporter.sendMail({
       from: req.body.userEmail,
       to: `${process.env.GOOGLE_APP_EMAIL}`,
       subject: "Quote Request From Helion Site",
       text: `
+      PROMO CODE: ${req.body.promoCode}\n\n
       Project Address: ${req.body.userAddress}\n
       Client Name: ${req.body.userFirstName} ${req.body.userLastName}\n
       Phone: ${req.body.userPhone}\n
@@ -72,7 +76,8 @@ app.post("/quote", async (req, res) => {
       Roof Material: ${req.body.roofMaterial}\n
       Roof Age: ${req.body.roofAge}\n
       Average Bill: ${req.body.averageBill}\n
-      Panel Rating: ${req.body.panelRating}\n`,
+      Panel Rating: ${req.body.panelRating}\n
+      `,
     });
   } catch (e) {
     console.log(e);

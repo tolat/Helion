@@ -9,7 +9,7 @@ import Testimonials from "./components/Homepage/Testimonials";
 import Footer from "./components/Misc/Footer/Footer";
 import { useWindowSize } from "usehooks-ts";
 import FreeQuoteModal from "./components/Misc/Modals/FreeQuoteModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { selectTSML, handleToggleModal } from "./utils";
 import ContactModal from "./components/Misc/Modals/ContactModal";
 import Flash from "./components/Misc/Flash/Flash";
@@ -25,6 +25,15 @@ function App() {
     o: "0",
     v: "hidden",
   });
+  const [promoCode, setPromoCode] = useState(false)
+
+  useEffect(()=>{
+    const path = window.location.pathname
+    if(path.includes('promo')){
+      const promoCode = path.slice(path.indexOf('/promo')+7)
+      setPromoCode(promoCode)
+    }
+  },[])
 
   const totalZoom = selectTSML(width, "1", "0.75", "0.80", "1");
 
@@ -44,6 +53,7 @@ function App() {
         modalVis={quoteModalVis}
         setModalVis={setQuoteModalVis}
         zoom={totalZoom}
+        promoCode={promoCode}
       />
       <ContactModal
         viewportWidth={width}

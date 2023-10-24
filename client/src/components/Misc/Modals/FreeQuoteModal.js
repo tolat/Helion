@@ -35,7 +35,7 @@ const FreeQuoteModal = (props) => {
   const scrollMaskImage = selectTSML(w, "", "none", "none", "none");
   const buttonFontSize = selectTSML(w, "1.4rem", "", "", "");
   const formPadding = selectTSML(w, "3rem 1rem 3rem 1rem");
-  const inputLabelMaxWidth = selectTSML(w, "100%", "50%", "50%", "50%")
+  const inputLabelMaxWidth = selectTSML(w, "100%", "50%", "50%", "50%");
 
   const [spinnerDisplay, setSpinnerDisplay] = useState("none");
   const [iconDisplay, setIconDisplay] = useState("block");
@@ -67,7 +67,9 @@ const FreeQuoteModal = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (document.getElementById("quoteModalSpinner").style.display == "block") {
+    if (
+      document.getElementById("quoteModalSpinner").style.display === "block"
+    ) {
       return;
     }
 
@@ -111,10 +113,13 @@ const FreeQuoteModal = (props) => {
     setSpinnerDisplay("block");
     setIconDisplay("none");
 
-     // Report conversion to Google
-     window.gtag('event', 'conversion', {'send_to': 'AW-11336437981/Cg6TCPHf8OEYEN2h0Z0q'});
+    // Report conversion to Google
+    window.gtag("event", "conversion", {
+      send_to: "AW-11336437981/Cg6TCPHf8OEYEN2h0Z0q",
+    });
 
     try {
+      formData.promoCode = props.promoCode;
       sendMessage(formData, "/quote", resetSuccess, resetFailure);
     } catch (e) {
       resetFailure(e);
@@ -222,7 +227,7 @@ const FreeQuoteModal = (props) => {
                 style={{
                   display: "flex",
                   flexDirection: lowerSectionInputsFlexDirection,
-                  width: "100%"
+                  width: "100%",
                 }}
               >
                 <GeneralInput
@@ -243,7 +248,7 @@ const FreeQuoteModal = (props) => {
                 style={{
                   display: "flex",
                   flexDirection: lowerSectionInputsFlexDirection,
-                  width: "100%"
+                  width: "100%",
                 }}
               >
                 <GeneralInput
@@ -263,6 +268,12 @@ const FreeQuoteModal = (props) => {
               </div>
             </div>
           </div>
+
+          {props.promoCode ? (
+            <h2 style={{ padding: "0 1rem" }}>
+              Promotion Applied: {props.promoCode}
+            </h2>
+          ) : null}
           {isMobile(w) ? (
             <SubmitButton
               buttonFontSize={buttonFontSize}
@@ -301,30 +312,30 @@ const SubmitButton = (props) => {
         marginBottom: marginBottom,
       }}
     >
-      <div className={styles.submitButtonContainer}
-      ><div style={{  fontSize: props.buttonFontSize }}>Request Quote</div>
+      <div className={styles.submitButtonContainer}>
+        <div style={{ fontSize: props.buttonFontSize }}>Request Quote</div>
 
-      <img
-        style={{
-          marginLeft: "0.6rem",
-          height: "2rem",
-          display: props.iconDisplay,
-          filter: "invert(1)"
-        }}
-        src={sendmail_icon}
-        alt="send icon"
-      />
-      <div
-        id="quoteModalSpinner"
-        style={{
-          marginLeft: "1rem",
-          display: props.spinnerDisplay,
-          zoom: "0.8",
-        }}
-      >
-        <Spinner animation="border" role="status" />
-      </div></div>
-      
+        <img
+          style={{
+            marginLeft: "0.6rem",
+            height: "2rem",
+            display: props.iconDisplay,
+            filter: "invert(1)",
+          }}
+          src={sendmail_icon}
+          alt="send icon"
+        />
+        <div
+          id="quoteModalSpinner"
+          style={{
+            marginLeft: "1rem",
+            display: props.spinnerDisplay,
+            zoom: "0.8",
+          }}
+        >
+          <Spinner animation="border" role="status" />
+        </div>
+      </div>
     </GeneralButton>
   );
 };
