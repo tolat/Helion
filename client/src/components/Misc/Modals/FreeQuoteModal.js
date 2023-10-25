@@ -148,6 +148,20 @@ const FreeQuoteModal = (props) => {
             zoom: props.zoom,
           }}
         >
+          {props.promoCode ? (
+            <h3
+              style={{
+                color: "#424242",
+                fontWeight: "bold",
+                backgroundColor: "#f0f0f0",
+                fontFamily: "Open Sans",
+                padding: "1rem",
+                margin: "2rem 0.5rem",
+              }}
+            >
+              Promotion Applied: {props.promoCode}
+            </h3>
+          ) : null}
           <div className={modalStyles.sectionContainer}>
             <div className={modalStyles.sectionHeader}>
               <img
@@ -269,20 +283,6 @@ const FreeQuoteModal = (props) => {
             </div>
           </div>
 
-          {props.promoCode ? (
-            <h3
-              style={{
-                color: "#424242",
-                fontWeight: "bold",
-                backgroundColor: "#f0f0f0",
-                fontFamily: "Open Sans",
-                padding: "1rem",
-                margin: "0 0.5rem"
-              }}
-            >
-              Promotion Applied: {props.promoCode}
-            </h3>
-          ) : null}
           {isMobile(w) ? (
             <SubmitButton
               buttonFontSize={buttonFontSize}
@@ -319,7 +319,7 @@ const SubmitButton = (props) => {
         justifyContent: "flex-end",
         alignItems: "center",
         marginBottom: marginBottom,
-        padding: "1rem 0.5rem"
+        padding: "1rem 0.5rem",
       }}
     >
       <div className={styles.submitButtonContainer}>

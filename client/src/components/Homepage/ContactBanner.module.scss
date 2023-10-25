@@ -20,6 +20,7 @@
 
   @include responsive("width", 100%, 70%, 50%, 40%);
   @include responsive("border-radius", 0, 2px, 2px, 2px);
+  @include responsive("font-size", 0.9rem, unset, unset, unset);
 }
 
 .quoteButton {
@@ -30,6 +31,8 @@
   transition: all 0.3s ease-in-out;
   border-radius: 2px;
   font-weight: bold;
+
+  @include responsive("font-size", 0.7rem, unset, unset, unset);
 }
 
 .quoteButton:hover {
@@ -43,6 +46,9 @@
   padding: 0.1rem 1.7rem 0.1rem 1.7rem;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
+
+  @include responsive("font-size", 0.7rem, unset, unset, unset);
+  @include responsive("display", none, block, block, block);
 }
 
 .contactButton:hover {
