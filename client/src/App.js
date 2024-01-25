@@ -9,7 +9,7 @@ import Testimonials from "./components/Homepage/Testimonials";
 import Footer from "./components/Misc/Footer/Footer";
 import { useWindowSize } from "usehooks-ts";
 import FreeQuoteModal from "./components/Misc/Modals/FreeQuoteModal";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { selectTSML, handleToggleModal } from "./utils";
 import ContactModal from "./components/Misc/Modals/ContactModal";
 import Flash from "./components/Misc/Flash/Flash";
