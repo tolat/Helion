@@ -41,7 +41,7 @@ const Footer = (props) => {
                   fontSize: mainFontSize,
                 }}
               >
-                <div>604.723.5351</div>
+                <div>604.600.6664</div>
                 <div>helionsolarsystems@gmail.com</div>
                 <img
                   className={styles.nabcepLogo}

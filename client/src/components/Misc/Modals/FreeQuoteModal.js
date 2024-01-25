@@ -253,7 +253,7 @@ const FreeQuoteModal = (props) => {
                 />
                 <GeneralInput
                   label="Roof Age"
-                  type="number"
+                  type="text"
                   inputRef={formRefs.roofAge}
                   required={false}
                 />

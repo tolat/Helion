@@ -37,12 +37,11 @@
   display: flex;
   justify-content: space-between;
 
-  @include responsive("flex-direction", column, row, row, row);
+  @include responsive("flex-direction", column, column, column, column);
 }
 
 .logoSmall {
   width: 10rem;
-  margin: 1rem;
 
   @include responsive("margin-left", 0)
 }
