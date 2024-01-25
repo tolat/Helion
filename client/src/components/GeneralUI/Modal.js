@@ -1,11 +1,8 @@
 import styles from "./Modal.module.css";
-import { selectTSML, handleToggleModal } from "../../utils";
+import {  handleToggleModal } from "../../utils";
 import closeButton from "../../images/close_button.png";
 
 const Modal = (props) => {
-  const w = props.viewportWidth;
-  const modalZoom = selectTSML(w, "0.9", "0.8", "1", "1");
-
   const onToggleModal = () => {
     handleToggleModal(props.setModalVis);
   };
@@ -22,7 +19,6 @@ const Modal = (props) => {
         className={`${styles.modal} noscroll`}
         style={{
           width: props.modalWidth,
-          zoom: modalZoom,
           height: props.modalHeight,
           maxHeight: props.modalMaxHeight,
         }}>

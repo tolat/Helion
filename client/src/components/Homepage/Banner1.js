@@ -3,10 +3,7 @@ import BlackFade from "../GeneralUI/BlackFade";
 import styles from "./Banner1.module.css";
 import { selectTSML } from "../../utils";
 import ExpandButton from "../GeneralUI/ExpandButton";
-
 import bg_medium from "../../images/solarspan10.jpg";
-import bg_parminder from "../../images/parminder.jpg"
-import bg_alt from "../../images/solarspan19.jpeg"
 import nabcepSeal from "../../images/pv_assoc_seal.png";
 
 const Banner1 = (props) => {
@@ -16,7 +13,7 @@ const Banner1 = (props) => {
   const fontSize = selectTSML(w, "1.5rem", "2.2rem", "2.5rem", "3rem");
   const nebcepJustify = selectTSML(w, "center", "end", "", "");
   const expandButtonMargin = selectTSML(w, "4rem", "", "", "");
-  const expandButtonDisplay  =selectTSML(w,"", "none", "none", "none")
+  const expandButtonDisplay = selectTSML(w, "", "none", "none", "none");
   const textAlign = selectTSML(w, "left");
   const nabcepDisplay = selectTSML(w, "flex");
   const bannerAlign = selectTSML(w, "center");
@@ -43,7 +40,13 @@ const Banner1 = (props) => {
     "-4.7rem",
     "-4.7rem"
   );
-  const phoneNumberFontSize = selectTSML(w, "1.3rem", "2rem", "2.8rem", "2.8rem");
+  const phoneNumberFontSize = selectTSML(
+    w,
+    "1.3rem",
+    "2rem",
+    "2.8rem",
+    "2.8rem"
+  );
   const phoneNumberMargin = selectTSML(
     w,
     "1rem 0 0 1rem",
@@ -83,8 +86,7 @@ const Banner1 = (props) => {
                   fontSize: phoneNumberFontSize,
                   margin: phoneNumberMargin,
                   textAlign: phoneNumberTextAlign,
-               fontFamily: "Arvo",
-             
+                  fontFamily: "Arvo",
                 }}
               >
                 604.600.6664
@@ -112,7 +114,7 @@ const Banner1 = (props) => {
               <ExpandButton
                 style={{
                   marginBottom: expandButtonMargin,
-                  display: expandButtonDisplay
+                  display: expandButtonDisplay,
                 }}
                 scrollToId="solarProgramsSection"
               />
