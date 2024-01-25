@@ -2,9 +2,9 @@ import CentralSection from "../GeneralUI/CentralSection";
 import styles from "./Testimonials.module.scss";
 import AliceCarousel from "react-alice-carousel";
 
-import parminder from "../../images/parminder.jpg";
-import curack from "../../images/curack.jpg";
-import marja from "../../images/marja.jpg";
+import parminder from "../../images/parminder1.jpg";
+import curack from "../../images/curack1.jpg";
+import marja from "../../images/marja1.jpg";
 import quoteLeft from "../../images/quote-left.png";
 import quoteRight from "../../images/quote-right.png";
 
