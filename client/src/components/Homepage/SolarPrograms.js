@@ -3,13 +3,10 @@ import styles from "./SolarPrograms.module.css";
 import { selectTSML } from "../../utils";
 
 import gh_hor from "../../images/greener_homes_graphic.png";
-import gh_wide from "../../images/GH-journey-map.png";
-import nm_hor from "../../images/netmetering_graphic.png";
-import nm_ver from "../../images/netmetering_graphic_vertical.jpg";
+import nm_ver from "../../images/netmetering_graphic_vertical.png";
 import nm_wide from "../../images/netmetering_graphic_square.png";
 import nm_imgonly from "../../images/nm_graphic_imageonly.png";
-import bg_solar from "../../images/solarspan10.jpg";
-import BlackFade from "../GeneralUI/BlackFade";
+
 
 const SolarPrograms = (props) => {
   const w = props.viewportWidth;
