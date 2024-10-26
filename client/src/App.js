@@ -27,7 +27,7 @@ function App() {
   });
   const [promoCode, setPromoCode] = useState(false);
 
-  const totalZoom = selectTSML(width, "1", "0.75", "0.80", "1");
+  const totalZoom = selectTSML(width, "1", "0.65", "0.80", "1");
 
   const onLoad = () => {
     // eslint-disable-next-line

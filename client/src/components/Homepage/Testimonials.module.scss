@@ -61,11 +61,11 @@
 }
 
 .testimonialHeader {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 
-  @include responsive("font-size", 1rem, 1.3rem, 1.4rem, 1.8rem);
+  @include responsive("font-size", 1rem, 1.6rem, 1.8rem, 1.8rem);
   @include responsive(
     padding,
     0 2rem 0 2rem,
