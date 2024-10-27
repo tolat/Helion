@@ -1,7 +1,7 @@
 import styles from "./App.module.css";
 import NavBar from "./components/Misc/Nav/NavBar";
 import Banner1 from "./components/Homepage/Banner1";
-import SolarPrograms from "./components/Homepage/SolarPrograms";
+import NetMetering from "./components/Homepage/NetMetering";
 import SolarSolutions from "./components/Homepage/SolarSolutions";
 import OurProducts from "./components/Homepage/OurProducts";
 import FAQ from "./components/Homepage/FAQ";
@@ -9,7 +9,7 @@ import Testimonials from "./components/Homepage/Testimonials";
 import Footer from "./components/Misc/Footer/Footer";
 import { useWindowSize } from "usehooks-ts";
 import FreeQuoteModal from "./components/Misc/Modals/FreeQuoteModal";
-import {  useState } from "react";
+import { useState } from "react";
 import { selectTSML, handleToggleModal } from "./utils";
 import ContactModal from "./components/Misc/Modals/ContactModal";
 import Flash from "./components/Misc/Flash/Flash";
@@ -17,6 +17,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavDrawer from "./components/Misc/Nav/NavDrawer";
 import RequestQuoteButton from "./components/Homepage/RequestQuoteButton";
 import ContactBanner from "./components/Homepage/ContactBanner";
+import Grants from "./components/Homepage/Grants";
 
 function App() {
   const { width } = useWindowSize();
@@ -79,8 +80,9 @@ function App() {
         <Testimonials viewportWidth={width} zoom={totalZoom} />
         <SolarSolutions viewportWidth={width} zoom={totalZoom} />
         <OurProducts zoom={totalZoom} />
-        <SolarPrograms viewportWidth={width} zoom={totalZoom} />
+        <NetMetering viewportWidth={width} zoom={totalZoom} />
         <FAQ viewportWidth={width} zoom={totalZoom} />
+        <Grants viewportWidth={width} zoom={totalZoom} />
         <RequestQuoteButton
           viewportWidth={width}
           setModalVis={setQuoteModalVis}

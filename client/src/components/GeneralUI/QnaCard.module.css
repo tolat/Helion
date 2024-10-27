@@ -19,16 +19,15 @@
 }
 
 .q {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-right: 1rem;
 }
 
 .question {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin-top: 0.1rem;
   box-sizing: border-box;
-  line-height: 1.6rem;
   font-weight: bold;
 }
 

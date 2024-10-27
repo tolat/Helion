@@ -19,7 +19,7 @@ const SolarSolutions = (props) => {
   const tileDisplay = selectTSML(w, "flex", "grid", "flex", "flex");
   const tileFlexDirection = selectTSML(w, "column");
   const tileJustify = selectTSML(w, "center", "center", "", "");
-  const tileWidth = selectTSML(w, "100%", "85%", "22%", "22%");
+  const tileWidth = selectTSML(w, "90%", "85%", "22%", "22%");
   const textAlign = selectTSML(w, "", "", "", "");
   const tileImgHeight = selectTSML(w, "15rem", "20rem", "15rem", "15rem");
   const containerPadding = selectTSML(w, "0");
@@ -62,9 +62,8 @@ const SolarSolutions = (props) => {
   const textTilePadding = selectTSML(w, "0rem 1rem 2rem 1rem");
   const containerMarginBottom = selectTSML(w, "0rem", "2rem", "5rem", "10rem");
   const containerMarginTop = selectTSML(w, "unset", "0rem", "-1rem", "-1rem");
-  const tileMarginBottom = selectTSML(w, "0");
-  const tileBorderRadius = selectTSML(w, "0px");
-  const tileBoxShadow = selectTSML(w, "none");
+  const tileMarginBottom = selectTSML(w);
+  const tileBoxShadow = selectTSML(w, "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" );
 
   return (
     <div style={{ zoom: props.zoom }}>

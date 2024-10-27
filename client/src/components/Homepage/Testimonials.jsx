@@ -84,7 +84,7 @@ const Carousel = (props) => {
         autoPlay={true}
         items={productCrouselItems}
         disableButtonsControls={true}
-        disableDotsControls={true}
+        disableDotsControls={false}
         infinite={true}
         animationDuration={2000}
         autoPlayInterval={10000}

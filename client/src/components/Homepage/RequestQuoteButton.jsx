@@ -11,7 +11,7 @@ const RequestQuoteButton = (props) => {
     handleToggleModal(props.setModalVis);
   };
 
-  const fontSize = selectTSML(w, "1.3rem", "1.6rem", "1.8rem", "2rem");
+  const fontSize = selectTSML(w, "1.2rem", "1.6rem", "1.8rem", "2rem");
   const iconHeight = selectTSML(w, "2.5rem", "3.5rem", "3.5rem", "3.5rem");
   const iconMarginRight = selectTSML(w, "0.5rem", "1rem", "1rem", "1rem");
   return (
