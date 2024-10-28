@@ -6,7 +6,6 @@ import { selectTSML } from "../../utils";
 import styles from "./SolarSolutions.module.css";
 
 import banner2 from "../../images/darkbg5.png";
-import banner2_mobile from "../../images/solarspan7.jpg";
 import stringInvImgDesktop from "../../images/strings_ground.jpeg";
 import stringInvImgMobile from "../../images/strings_ground_mobile.jpg";
 import microInvImg from "../../images/microinverter_roof.jpeg";
