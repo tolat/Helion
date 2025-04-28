@@ -61,7 +61,7 @@ const FAQ = (props) => {
             {
               key: "faq2",
               q: "How much does solar cost, and how long will it take to pay off?",
-              a: "In BC, the average cost of a solar system to offset the yearly energy usage of a home is $20,000 to $30,000 (not including battery backup). The payback period is highly dependent on site conditions, shading, roof angle, and region, but is typially between 10-15 years (standard system lifespan is 25-35 years).",
+              a: "In BC, the average cost of a solar system to offset the yearly energy usage of a home is $25,000 (not including battery backup). The payback period is highly dependent on site conditions, shading, roof angle, and region, but is typially around 12 years, while the standard system lifespan is 30 years.",
             },
             {
               key: "faq3",
@@ -75,13 +75,13 @@ const FAQ = (props) => {
             },
             {
               key: "faq5",
-              q: "Will I to install a battery?",
-              a: "Most residential solar systems do not have a battery, since they use BC Hydro's Self Generation program to 'store energy in the grid'. See the graphic below for more details.",
+              q: "How is my solar energy stored?",
+              a: "Most residential system are 'grid-tied' systems, meaning that they are effectively using the power grid to 'store' your excess energy. You can add a battery to you solar system as well, but batteries will nearly double the cost of a system, and are only beneficial in situations where you need power to remain on through an outage.",
             },
             {
               key: "faq6",
               q: "What will the up-front cost of installing solar be?",
-              a: "If you choose to take advantage of the greener homes program, most residential installs can be fully financed using the $40,000 interest free loan. You will also get a $5,000 rebate from BC Hydro!",
+              a: "If you choose to take advantage of the greener homes program, most residential installs can be fully financed with $0 down using the $40,000 interest free loan form Canada Greener Homes. You can also apply for an additional $5,000 rebate from BC Hydro!",
             },
           ].map((item) => (
             <CentralTile key={item.key} style={{ padding: containerPadding }}>
