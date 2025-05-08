@@ -81,13 +81,13 @@ const Carousel = (props) => {
     <div className={styles.carouselContainer}>
       <AliceCarousel
         mouseTracking
-        autoPlay={false}
+        autoPlay={true}
         items={productCrouselItems}
         disableButtonsControls={true}
         disableDotsControls={false}
         infinite={true}
         animationDuration={2000}
-        autoPlayInterval={10000}
+        autoPlayInterval={15000}
         selectTSML={{
           0: { items: 1 },
         }}
