@@ -15,8 +15,8 @@ import { useState, useEffect } from "react";
 const testimonials = [
   {
     image: cathcart,
-    header: "I highly recommend this company.",
-    text: "They were very professional and easy to work with. From the beginning to the end of the project, they effortlessly helped navigate through the grant & loan process answering every question I had along the way. The finished product looked amazing!!",
+    header: "My husband and I were delighted with the service",
+    text: "and we love our solar panels! From Helion's response to our initial inquiry through the city and BC Hydro application processes and finishing with the installation of our solar panels, we found Helion to be extremely responsive, thorough and professional. They took the time to explain which system would work best for our needs and to suggest solutions for the installation of the solar panels on our roof and the EV charger we required. The workmanship was excellent. ",
     source: "S. Cathcart (11.34 kW Grid-Tied System 2025)",
   },
   {
@@ -81,7 +81,7 @@ const Carousel = (props) => {
     <div className={styles.carouselContainer}>
       <AliceCarousel
         mouseTracking
-        autoPlay={true}
+        autoPlay={false}
         items={productCrouselItems}
         disableButtonsControls={true}
         disableDotsControls={false}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.de908264.css",
-    "main.js": "/static/js/main.50eed1ce.js",
+    "main.css": "/static/css/main.db649389.css",
+    "main.js": "/static/js/main.f1b67483.js",
     "static/js/488.94fff243.chunk.js": "/static/js/488.94fff243.chunk.js",
     "static/media/solarspan10.jpg": "/static/media/solarspan10.4ae0f8ad179d05709c3e.jpg",
     "static/media/marja1.jpg": "/static/media/marja1.0a5884a8a3a0d91cd5eb.jpg",
@@ -11,6 +11,7 @@
     "static/media/chadpeters.jpg": "/static/media/chadpeters.a0da0bc0b9a3948bd0f9.jpg",
     "static/media/OpenSans-VariableFont_wdth,wght.ttf": "/static/media/OpenSans-VariableFont_wdth,wght.a7076648e1c4bd836518.ttf",
     "static/media/new_ghl_whitebg.jpg": "/static/media/new_ghl_whitebg.e923f1d37018351fdb54.jpg",
+    "static/media/cathcart.jpeg": "/static/media/cathcart.ab44f96dd024217328ac.jpeg",
     "static/media/Helion_logo_nobg_light.png": "/static/media/Helion_logo_nobg_light.bf0df3b22cdff577e117.png",
     "static/media/Raleway-VariableFont_wght.ttf": "/static/media/Raleway-VariableFont_wght.238c232d5e08ec0c1c74.ttf",
     "static/media/netmetering_graphic_square.png": "/static/media/netmetering_graphic_square.c95c06d3d4105e19890a.png",
@@ -18,7 +19,6 @@
     "static/media/nm_graphic_imageonly.png": "/static/media/nm_graphic_imageonly.f8b5a074f73ad79cfabd.png",
     "static/media/worksafe.png": "/static/media/worksafe.fbb977d3e8bf74bcd750.png",
     "static/media/darkbg5.png": "/static/media/darkbg5.41d9b279dae862db05bc.png",
-    "static/media/solarspan7.jpg": "/static/media/solarspan7.5756ffc19b8421917764.jpg",
     "static/media/pv_assoc_seal.png": "/static/media/pv_assoc_seal.72cf4b97c0a14fdae8be.png",
     "static/media/microinverter_roof.jpeg": "/static/media/microinverter_roof.79d5f122f4eca0555eed.jpeg",
     "static/media/schneider_logo.png": "/static/media/schneider_logo.f5f65b76bd13bf13d815.png",
@@ -36,12 +36,12 @@
     "static/media/solaredge_logo.png": "/static/media/solaredge_logo.6ee6225f517fe893f807.png",
     "index.html": "/index.html",
     "static/media/expand.svg": "/static/media/expand.45a1a7112bf6255f362b38eaa86ac6de.svg",
-    "main.de908264.css.map": "/static/css/main.de908264.css.map",
-    "main.50eed1ce.js.map": "/static/js/main.50eed1ce.js.map",
+    "main.db649389.css.map": "/static/css/main.db649389.css.map",
+    "main.f1b67483.js.map": "/static/js/main.f1b67483.js.map",
     "488.94fff243.chunk.js.map": "/static/js/488.94fff243.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de908264.css",
-    "static/js/main.50eed1ce.js"
+    "static/css/main.db649389.css",
+    "static/js/main.f1b67483.js"
   ]
 }
